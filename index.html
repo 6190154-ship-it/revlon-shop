@@ -82,6 +82,7 @@ const products=[
 {id:5,shade:"240",price:39},
 {id:6,shade:"250",price:39}
 ];
+const additionalProducts = [];
 const cart={};
 const money=n=>n.toLocaleString("he-IL")+" ₪";
 function renderProducts(){
@@ -93,6 +94,24 @@ document.getElementById("products").innerHTML=products.map(p=>`
 <div class="price">${money(p.price)}</div>
 <button onclick="add(${p.id})">הוספה לסל +</button>
 </div>`).join("");
+}
+function renderAdditionalProducts() {
+  const activeProducts = additionalProducts.filter(p => p.active !== false);
+  const section = document.getElementById("moreProductsSection");
+  const container = document.getElementById("moreProducts");
+
+  section.style.display = activeProducts.length > 0 ? "block" : "none";
+
+  container.innerHTML = activeProducts.map(p => `
+    <div class="card">
+      <div class="photo">
+        ${p.image ? `<img src="${p.image}" alt="${p.name}">` : `<span class="bottle">💄</span>`}
+      </div>
+      <h3>${p.name}</h3>
+      <div class="price">${money(p.price)}</div>
+      <button onclick="add(${p.id})">הוספה לסל +</button>
+    </div>
+  `).join("");
 }
 function add(id){
 cart[id]=(cart[id]||0)+1;
@@ -152,6 +171,7 @@ window.location.href=url;
 alert("נפתחה אפשרות לשליחת ההזמנה במייל. יש לאשר את השליחה בתוכנת המייל.");
 };
 renderProducts();
+renderAdditionalProducts();
 renderCart();
 </script>
 </body>
