@@ -88,8 +88,7 @@ const cart={};
 const money=n=>n.toLocaleString("he-IL")+" ₪";
 function renderProducts(){
 document.getElementById("products").innerHTML=products.map(p=>`
-<div class="card">
-<div class="photo"><span class="bottle">💄</span></div>
+<div class="card"><div class="photo"><img src="${p.shade}.jpg" alt="מייקאפ REVLON גוון ${p.shade}"></div>
 <h3>מייקאפ REVLON – גוון ${p.shade}</h3>
 
 <div class="price">${money(p.price)}</div>
