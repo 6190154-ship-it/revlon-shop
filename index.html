@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>REVLON | מייקאפ בבני ברק</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#fffaf9;color:#513b40}
+header{background:#f5e5e7;padding:22px;text-align:center}
+.logo{font: bold 35px Georgia,serif;letter-spacing:2px}
+.hero{text-align:center;padding:38px 16px;background:linear-gradient(135deg,#f8e9eb,#fff7ed)}
+.hero h1{font-size:28px;margin:10px 0}
+.hero p{line-height:1.8}
+main{max-width:900px;margin:auto;padding:24px 15px}
+h2{color:#805661}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+.card{background:white;border:1px solid #ecdadd;border-radius:16px;padding:16px;text-align:center;box-shadow:0 3px 12px #7b526010}
+.photo{height:150px;display:flex;align-items:center;justify-content:center;background:#fbf2f1;border-radius:12px;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:contain}
+.bottle{font-size:65px}
+.price{font-size:22px;font-weight:bold;margin:12px}
+button{background:#865966;color:white;border:0;border-radius:9px;padding:12px 18px;cursor:pointer;font-weight:bold}
+button:hover{background:#69434d}
+input,textarea{width:100%;padding:12px;margin:7px 0;border:1px solid #dbc7cc;border-radius:8px;font:inherit}
+.cart{background:white;border:1px solid #ecdadd;border-radius:16px;padding:20px;margin-top:25px}
+.item{padding:10px 0;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.small{padding:6px 10px}
+.note{font-size:13px;color:#806d72;line-height:1.7}
+footer{text-align:center;padding:25px;background:#f5e5e7;margin-top:30px}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">REVLON</div>
+<div>BEAUTY COLLECTION · בני ברק</div>
+</header>
+<div class="hero">
+<h1>המייקאפ שאת אוהבת<br>במחיר שתאהבי!</h1>
+<p>מייקאפ REVLON COLORSTAY<br>
+הגוונים המבוקשים · איסוף ממרכז בני ברק<br>
+בתיאום מראש</p>
+</div>
+<main>
+<h2>בחרי את הגוון שלך</h2>
+<p class="note">הגוון והמחיר מופיעים ליד כל מוצר. התמונות והנתונים כרגע להמחשה בלבד.</p>
+<div class="grid" id="products"></div>
+<section class="cart">
+<h2>🛍 סל הקניות שלי</h2>
+<div id="cartItems">הסל ריק</div>
+<h3 id="total">סה״כ: 0 ₪</h3>
+<h2>פרטי הזמנה</h2>
+<form id="orderForm">
+<input id="customer" placeholder="שם מלא" required>
+<input id="phone" type="tel" placeholder="מספר טלפון" required>
+<input id="email" type="email" placeholder="כתובת מייל (לא חובה)">
+<textarea id="notes" rows="3" placeholder="הערות להזמנה"></textarea>
+<button type="submit">הכנת הזמנה לשליחה במייל</button>
+</form>
+<p class="note">
+אין תשלום באתר. לחיצה על הכפתור תפתח הודעת מייל
+עם פרטי ההזמנה. יש לשלוח אותה כדי להעביר את הבקשה.
+</p>
+</section>
+</main>
+<footer>
+REVLON COLORSTAY<br>
+להזמנות: 053-3190439<br>
+איסוף ממרכז בני ברק בתיאום מראש
+</footer>
+<script>
+const products=[
+{id:1,shade:"180",price:39},
+{id:2,shade:"220",price:39},
+{id:3,shade:"150",price:39},
+{id:4,shade:"240",price:39}
+];
+const cart={};
+const money=n=>n.toLocaleString("he-IL")+" ₪";
+function renderProducts(){
+document.getElementById("products").innerHTML=products.map(p=>`
+<div class="card">
+<div class="photo"><span class="bottle">💄</span></div>
+<h3>REVLON ColorStay</h3>
+<p>גוון ${p.shade}</p>
+<div class="price">${money(p.price)}</div>
+<button onclick="add(${p.id})">הוספה לסל +</button>
+</div>`).join("");
+}
+function add(id){
+cart[id]=(cart[id]||0)+1;
+renderCart();
+}
+function change(id,delta){
+cart[id]=(cart[id]||0)+delta;
+if(cart[id]<=0)delete cart[id];
+renderCart();
+}
+function renderCart(){
+let total=0;
+let html="";
+products.forEach(p=>{
+const q=cart[p.id]||0;
+if(!q)return;
+total+=p.price*q;
+html+=`<div class="item">
+<span>ColorStay גוון ${p.shade}<br>
+${money(p.price*q)}</span>
+<span>
+<button class="small" onclick="change(${p.id},-1)">−</button>
+${q}
+<button class="small" onclick="change(${p.id},1)">+</button>
+</span></div>`;
+});
+document.getElementById("cartItems").innerHTML=html||"הסל ריק";
+document.getElementById("total").textContent="סה״כ: "+money(total);
+}
+document.getElementById("orderForm").onsubmit=function(e){
+e.preventDefault();
+const selected=products.filter(p=>cart[p.id]);
+if(!selected.length){alert("יש להוסיף מוצר לסל");return;}
+const name=document.getElementById("customer").value;
+const phone=document.getElementById("phone").value;
+const email=document.getElementById("email").value;
+const notes=document.getElementById("notes").value;
+const lines=selected.map(p=>
+"גוון "+p.shade+" | כמות "+cart[p.id]+
+" | "+money(p.price*cart[p.id]));
+const total=selected.reduce((s,p)=>s+p.price*cart[p.id],0);
+const body=[
+"הזמנה חדשה מאתר REVLON",
+"שם: "+name,
+"טלפון: "+phone,
+"מייל: "+email,
+"",
+...lines,
+"",
+"סה״כ: "+money(total),
+"הערות: "+notes
+].join("\n");
+const url="mailto:6190154@gmail.com?subject="+
+encodeURIComponent("הזמנת מייקאפ REVLON")+
+"&body="+encodeURIComponent(body);
+window.location.href=url;
+alert("נפתחה אפשרות לשליחת ההזמנה במייל. יש לאשר את השליחה בתוכנת המייל.");
+};
+renderProducts();
+renderCart();
+</script>
+</body>
+</html>
