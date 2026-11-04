@@ -75,6 +75,7 @@ REVLON COLORSTAY<br>
 </footer>
 <script>
 const products=[
+{id:7,shade:"110",price:39},
 {id:1,shade:"150",price:39},
 {id:2,shade:"180",price:39},
 {id:3,shade:"200",price:39},
@@ -125,12 +126,11 @@ renderCart();
 function renderCart(){
 let total=0;
 let html="";
-products.forEach(p=>{
-const q=cart[p.id]||0;
+[...products, ...additionalProducts].forEach(p=>{const q=cart[p.id]||0;
 if(!q)return;
 total+=p.price*q;
 html+=`<div class="item">
-<span>ColorStay גוון ${p.shade}<br>
+<span>${p.name || "REVLON ColorStay גוון " + p.shade}<br>
 ${money(p.price*q)}</span>
 <span>
 <button class="small" onclick="change(${p.id},-1)">−</button>
@@ -143,18 +143,19 @@ document.getElementById("total").textContent="סה״כ: "+money(total);
 }
 document.getElementById("orderForm").onsubmit=function(e){
 e.preventDefault();
-const selected=products.filter(p=>cart[p.id]);
+const selected=[...products, ...additionalProducts].filter(p=>cart[p.id]);
 if(!selected.length){alert("יש להוסיף מוצר לסל");return;}
 const name=document.getElementById("customer").value;
 const phone=document.getElementById("phone").value;
 const email=document.getElementById("email").value;
 const notes=document.getElementById("notes").value;
 const lines=selected.map(p=>
-"גוון "+p.shade+" | כמות "+cart[p.id]+
+(p.name || "REVLON ColorStay גוון "+p.shade)+
+" | כמות "+cart[p.id]+
 " | "+money(p.price*cart[p.id]));
 const total=selected.reduce((s,p)=>s+p.price*cart[p.id],0);
 const body=[
-"הזמנה חדשה מאתר REVLON",
+"הזמנה חדשה מאתר BLUSH BEAUTY",
 "שם: "+name,
 "טלפון: "+phone,
 "מייל: "+email,
@@ -165,7 +166,7 @@ const body=[
 "הערות: "+notes
 ].join("\n");
 const url="mailto:6190154@gmail.com?subject="+
-encodeURIComponent("הזמנת מייקאפ REVLON")+
+encodeURIComponent("הזמנה מאתר BLUSH BEAUTY")+
 "&body="+encodeURIComponent(body);
 window.location.href=url;
 alert("נפתחה אפשרות לשליחת ההזמנה במייל. יש לאשר את השליחה בתוכנת המייל.");
