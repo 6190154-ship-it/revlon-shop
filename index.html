@@ -90,8 +90,8 @@ function renderProducts(){
 document.getElementById("products").innerHTML=products.map(p=>`
 <div class="card">
 <div class="photo"><span class="bottle">💄</span></div>
-<h3>REVLON ColorStay</h3>
-<p>גוון ${p.shade}</p>
+<h3>מייקאפ REVLON – גוון ${p.shade}</h3>
+
 <div class="price">${money(p.price)}</div>
 <button onclick="add(${p.id})">הוספה לסל +</button>
 </div>`).join("");
@@ -130,7 +130,7 @@ let html="";
 if(!q)return;
 total+=p.price*q;
 html+=`<div class="item">
-<span>${p.name || "REVLON ColorStay גוון " + p.shade}<br>
+<span>${p.name || "מייקאפ REVLON – גוון " + p.shade}<br>
 ${money(p.price*q)}</span>
 <span>
 <button class="small" onclick="change(${p.id},-1)">−</button>
@@ -150,7 +150,7 @@ const phone=document.getElementById("phone").value;
 const email=document.getElementById("email").value;
 const notes=document.getElementById("notes").value;
 const lines=selected.map(p=>
-(p.name || "REVLON ColorStay גוון "+p.shade)+
+(p.name || "מייקאפ REVLON – גוון "+p.shade)+
 " | כמות "+cart[p.id]+
 " | "+money(p.price*cart[p.id]));
 const total=selected.reduce((s,p)=>s+p.price*cart[p.id],0);
