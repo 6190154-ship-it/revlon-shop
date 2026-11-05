@@ -173,16 +173,21 @@ h2{color:#805661}
 
 
 
-.old-price::after{
+
+.crossed-price{
+  position:relative;
+  display:inline-block;
+  direction:ltr;
+}
+.crossed-price::after{
   content:"";
   position:absolute;
   left:50%;
   top:50%;
-  width:32px;
+  width:110%;
   height:2px;
   background:#e32636;
   transform:translate(-50%,-50%) rotate(-15deg);
-  transform-origin:center;
   pointer-events:none;
 }
 
@@ -345,7 +350,8 @@ document.getElementById("products").innerHTML=products.map(p=>`
 <h3>מייקאפ REVLON – גוון ${p.shade}</h3>
 
 
-<div class="old-price">45 ₪</div>
+
+<div class="old-price"><span class="crossed-price">45</span> ₪</div>
 <div class="price">${money(p.price)}</div>
 
 <button onclick="add(${p.id})">הוספה לסל +</button>
