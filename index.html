@@ -282,6 +282,63 @@ footer{
   .footer-brand{width:100%;justify-content:center}
 }
 
+.shop-layout{
+  display:grid;
+  grid-template-columns:270px minmax(0,1fr);
+  gap:28px;
+  align-items:start;
+  direction:rtl;
+  max-width:1450px;
+  margin:25px auto;
+}
+
+.order-guide{
+  background:linear-gradient(145deg,#fff8f7,#fbe6e9);
+  border:1px solid #eac2ca;
+  border-radius:18px;
+  padding:24px 20px;
+  box-shadow:0 5px 15px rgba(150,65,90,0.10);
+}
+
+.order-guide h2{
+  color:#80263d;
+  text-align:center;
+  margin:0 0 22px;
+}
+
+.order-step{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 0;
+  border-bottom:1px solid #efd6da;
+  font-family:'Assistant',Arial,sans-serif;
+  font-size:17px;
+}
+
+.order-step:last-child{
+  border-bottom:0;
+}
+
+.step-number{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#963449;
+  color:white;
+  font-weight:bold;
+}
+
+@media(max-width:850px){
+  .shop-layout{
+    grid-template-columns:1fr;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -298,9 +355,41 @@ footer{
 
 </div>
 <main>
-<h2>בחרי את הגוון שלך</h2>
-<p class="note">הגוון והמחיר מופיעים ליד כל מוצר. התמונות והנתונים כרגע להמחשה בלבד.</p>
-<div class="grid" id="products"></div>
+
+<div class="shop-layout">
+
+  <aside class="order-guide" dir="rtl">
+    <h2>איך מזמינים?</h2>
+
+    <div class="order-step">
+      <span class="step-number">1</span>
+      <span>בחרי את הגוונים שאת רוצה והוסיפי לסל</span>
+    </div>
+
+    <div class="order-step">
+      <span class="step-number">2</span>
+      <span>מלאי את פרטי ההזמנה</span>
+    </div>
+
+    <div class="order-step">
+      <span class="step-number">3</span>
+      <span>לחצי על הכנת הזמנה לשליחה במייל</span>
+    </div>
+
+    <div class="order-step">
+      <span class="step-number">4</span>
+      <span>אנחנו ניצור איתך קשר לאיסוף וקניה</span>
+    </div>
+  </aside>
+
+  <div class="shop-products">
+    <h2>בחרי את הגוון שלך</h2>
+    <p class="note">הגוון והמחיר מופיעים ליד כל מוצר. התמונות והנתונים כרגע להמחשה בלבד.</p>
+    <div class="grid" id="products"></div>
+  </div>
+
+</div>
+
   <section id="moreProductsSection" style="display:none;">
   <h2>מוצרים נוספים</h2>
   <div class="grid" id="moreProducts"></div>
