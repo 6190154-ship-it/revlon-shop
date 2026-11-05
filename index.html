@@ -8,10 +8,40 @@
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,sans-serif;background:#fffaf9;color:#513b40}
-header{background:#f5e5e7;padding:22px;text-align:center}
-.logo{font: bold 35px Georgia,serif;letter-spacing:2px}
-.hero{text-align:center;padding:38px 16px;background:linear-gradient(135deg,#f8e9eb,#fff7ed)}
-.hero h1{font-size:28px;margin:10px 0}
+
+header{
+  background:linear-gradient(135deg,#f5dce0,#fff0ed,#f5dce0);
+  padding:24px 15px 14px;
+  text-align:center;
+  border-bottom:1px solid #e7b9c2;
+}
+.logo{
+  font-family:Georgia,serif;
+  font-size:42px;
+  font-weight:normal;
+  letter-spacing:3px;
+  color:#80263d;
+}
+.logo::before{
+  content:"♡";
+  display:block;
+  font-size:28px;
+  line-height:1;
+  color:#bd526b;
+}
+.hero{
+  text-align:center;
+  padding:35px 15px;
+  background:linear-gradient(135deg,#fff3f1,#f8e1e5,#fff0ed);
+}
+.hero h1{
+  font-size:38px;
+  line-height:1.25;
+  color:#742238;
+  margin:12px 0 20px;
+  font-weight:bold;
+}
+
 .hero p{line-height:1.8}
 main{max-width:900px;margin:auto;padding:24px 15px}
 h2{color:#805661}
