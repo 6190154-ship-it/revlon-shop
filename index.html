@@ -6,19 +6,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BLUSH BEAUTY | איפור וטיפוח</title>
 <style>
+  
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Heebo:wght@400;500;600;700&display=swap');
+
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,sans-serif;background:#fffaf9;color:#513b40}
 
 header{
   background:linear-gradient(135deg,#f5dce0,#fff0ed,#f5dce0);
   padding:24px 15px 14px;
-  text-align:center;
-  border-bottom:1px solid #e7b9c2;
-}
-.logo{
-  font-family:Georgia,serif;
-  font-size:42px;
-  font-weight:normal;
+ ה
   letter-spacing:3px;
   color:#80263d;
 }
@@ -34,16 +31,30 @@ header{
   padding:35px 15px;
   background:linear-gradient(135deg,#fff3f1,#f8e1e5,#fff0ed);
 }
+
+ 
 .hero h1{
+  font-family:'Heebo',Arial,sans-serif;
   font-size:38px;
-  line-height:1.25;
+  line-height:1.3;
   color:#742238;
   margin:12px 0 20px;
-  font-weight:bold;
+  font-weight:600;
 }
 
-.hero p{line-height:1.8}
-main{max-width:900px;margin:auto;padding:24px 15px}
+.hero p{
+  font-family:'Assistant',Arial,sans-serif;
+  line-height:1.8;
+  font-size:19px;
+  color:#713448;
+}
+.hero p::first-line{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:27px;
+  font-weight:600;
+  letter-spacing:1px;
+}
+
 h2{color:#805661}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
 .card{background:white;border:1px solid #ecdadd;border-radius:16px;padding:16px;text-align:center;box-shadow:0 3px 12px #7b526010}
