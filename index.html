@@ -28,7 +28,46 @@ input,textarea{width:100%;padding:12px;margin:7px 0;border:1px solid #dbc7cc;bor
 .item{padding:10px 0;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;gap:8px}
 .small{padding:6px 10px}
 .note{font-size:13px;color:#806d72;line-height:1.7}
-footer{text-align:center;padding:25px;background:#f5e5e7;margin-top:30px}
+
+footer{
+  background:linear-gradient(90deg,#963449,#bd526b,#963449);
+  color:white;
+  padding:18px 20px;
+  margin-top:30px;
+}
+.footer-row{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:18px;
+}
+.footer-row span,
+.footer-row a{
+  color:white;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  text-decoration:none;
+  white-space:nowrap;
+}
+.footer-brand{
+  font-family:Georgia,serif;
+  font-size:23px;
+  font-weight:bold;
+}
+.footer-divider{
+  width:1px;
+  height:25px;
+  background:rgba(255,255,255,.65);
+}
+@media(max-width:650px){
+  .footer-row{gap:12px}
+  .footer-divider{display:none}
+  .footer-brand{width:100%;justify-content:center}
+}
+
 </style>
 </head>
 <body>
@@ -68,11 +107,28 @@ footer{text-align:center;padding:25px;background:#f5e5e7;margin-top:30px}
 </p>
 </section>
 </main>
-<footer>
-REVLON COLORSTAY<br>
-להזמנות: 053-3190439<br>
-איסוף ממרכז בני ברק בתיאום מראש
+
+<footer dir="rtl">
+  <div class="footer-row">
+    <span class="footer-brand">BLUSH BEAUTY</span>
+    <span class="footer-divider"></span>
+
+    <a href="tel:0533190439">
+      &#9742; להזמנות: 053-3190439
+    </a>
+    <span class="footer-divider"></span>
+
+   <a href="mailto:rw46011@gmail.com">
+    &#9993; rw46011@gmail.com
+    </a>
+  <span class="footer-divider"></span>
+
+  <span>
+ &#128205; איסוף ממרכז בני ברק בתיאום מראש
+ </span>
+  </div>
 </footer>
+
 <script>
 const products=[
 {id:7,shade:"110",price:39},
@@ -164,7 +220,7 @@ const body=[
 "סה״כ: "+money(total),
 "הערות: "+notes
 ].join("\n");
-const url="mailto:6190154@gmail.com?subject="+
+const url="mailto:rw46011@gmail.com?subject="+
 encodeURIComponent("הזמנה מאתר BLUSH BEAUTY")+
 "&body="+encodeURIComponent(body);
 window.location.href=url;
