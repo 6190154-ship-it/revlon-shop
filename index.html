@@ -515,109 +515,224 @@ body {
   }
 }
 
-/* BLUSH BEAUTY - Luxury order guide */
+
+/* BLUSH BEAUTY - Luxury Order Guide */
 
 .blush-order-guide {
   direction: rtl;
-  padding: 28px 18px;
-  border: 2px solid #d5a14f;
-  border-radius: 28px;
-  background:
-    radial-gradient(circle at 10% 10%, #fff8f6, transparent 55%),
-    linear-gradient(145deg, #ffe8e4, #f8d5d0);
-  box-shadow: 0 12px 30px #ad6b7330;
-  text-align: center;
   position: relative;
-  overflow: hidden;
-  font-family: Georgia, "Times New Roman", serif;
+  isolation: isolate;
+  width: 350px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 45px 0 25px;
+  padding: 60px 20px 30px;
+  text-align: center;
+  border: 3px solid #d7a34c;
+  border-radius: 32px;
+  background:
+    radial-gradient(ellipse at 8% 25%,
+      #c9948050 0%, transparent 40%),
+    radial-gradient(ellipse at 95% 70%,
+      #c88b7950 0%, transparent 45%),
+    linear-gradient(145deg,
+      #fff9f6, #fce4e0, #f7d2cf);
+  box-shadow:
+    0 15px 35px #a25d6530,
+    inset 0 0 20px #ffffff90;
+  overflow: visible;
 }
 
 .blush-order-guide::before {
   content: "";
   position: absolute;
-  inset: 7px;
-  border: 1px solid #e9c38b;
-  border-radius: 22px;
+  inset: 8px;
+  border: 1px solid #eac18b;
+  border-radius: 24px;
   pointer-events: none;
 }
 
 .blush-order-guide h2 {
-  font-size: 34px;
+  font-family: Georgia, serif;
+  font-size: 33px;
   color: #921a38;
-  font-weight: 700;
-  margin: 8px 0 5px;
+  margin: 5px 0 15px;
 }
 
 .blush-order-guide .subtitle {
-  display: inline-block;
-  padding: 9px 22px;
-  border-radius: 30px;
-  background: linear-gradient(90deg, #c56d7d, #a9445e);
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 25px;
+  padding: 12px 20px;
+  border-radius: 8px 28px;
+  background: linear-gradient(
+    100deg, #a83a56, #d98597, #ad425e);
   color: white;
-  font-size: 17px;
-  margin: 12px 0 25px;
-  box-shadow: 0 5px 12px #a9445e30;
+  font-size: 15px;
+  box-shadow: 0 5px 12px #a3475a40;
 }
 
 .blush-order-step {
   display: flex;
   align-items: center;
-  gap: 12px;
-  background: #fff9f7d9;
-  border: 1px solid #f4d4ce;
+  gap: 10px;
+  padding: 16px 12px;
+  margin-bottom: 15px;
   border-radius: 40px;
-  padding: 14px 12px;
-  margin-bottom: 14px;
-  box-shadow: 0 5px 12px #a65c6020;
+  background: #fffaf8ed;
+  border: 1px solid #f2d3cc;
+  box-shadow: 0 6px 15px #a45d6925;
   text-align: right;
 }
 
 .blush-order-number {
-  flex-shrink: 0;
-  width: 49px;
-  height: 49px;
-  border-radius: 50%;
+  flex: 0 0 45px;
+  width: 45px;
+  height: 45px;
   display: grid;
   place-items: center;
-  background: linear-gradient(145deg, #e88b9c, #a62c4c);
+  border-radius: 50%;
   border: 2px solid #d7a34c;
+  background: linear-gradient(
+    145deg, #efa2b2, #b53859);
   color: white;
-  font-size: 26px;
-  box-shadow: 0 3px 8px #a62c4c35;
+  font-size: 25px;
+  box-shadow: 0 3px 7px #a0445c45;
 }
 
 .blush-order-text {
   flex: 1;
-  font-size: 18px;
-  font-weight: bold;
-  color: #8e213b;
-  line-height: 1.5;
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 600;
+  color: #91203d;
 }
 
 .blush-order-icon {
-  font-size: 27px;
-  color: #a62c4c;
-  padding: 0 8px;
+  flex: 0 0 28px;
+  font-size: 23px;
+  color: #a63251;
+  padding-right: 8px;
   border-right: 1px solid #d7a34c;
 }
 
 .blush-order-brand {
-  color: #951b3c;
-  font-size: 25px;
-  letter-spacing: 2px;
   margin-top: 25px;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+  color: #971c3a;
   font-weight: bold;
 }
 
+/* Satin ribbon */
+
+.blush-ribbon {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 95px;
+  z-index: 5;
+}
+
+.ribbon-loop {
+  position: absolute;
+  top: 5px;
+  width: 70px;
+  height: 40px;
+  background: linear-gradient(
+    135deg, #a73a57, #ffd4dc 45%, #c34d6d);
+  border-radius: 75% 20% 75% 25%;
+  box-shadow: 0 3px 6px #8c345040;
+}
+
+.ribbon-loop.left {
+  left: 4px;
+  transform: rotate(18deg);
+}
+
+.ribbon-loop.right {
+  right: 4px;
+  transform: scaleX(-1) rotate(18deg);
+}
+
+.ribbon-tail {
+  position: absolute;
+  top: 35px;
+  width: 30px;
+  height: 55px;
+  background: linear-gradient(
+    90deg, #a83a58, #f5a6b7, #c75170);
+  clip-path: polygon(
+    0 0, 100% 0, 100% 100%,
+    50% 80%, 0 100%);
+}
+
+.ribbon-tail.left {
+  left: 42px;
+  transform: rotate(20deg);
+}
+
+.ribbon-tail.right {
+  right: 42px;
+  transform: rotate(-20deg);
+}
+
+.ribbon-knot {
+  position: absolute;
+  top: 19px;
+  left: 62px;
+  width: 26px;
+  height: 24px;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg, #a73858, #ffd3db, #a73858);
+  box-shadow: 0 2px 5px #85304a60;
+  z-index: 6;
+}
+
+/* Gold sparkles */
+
+.blush-sparkle {
+  position: absolute;
+  color: #dca750;
+  text-shadow: 0 0 9px #ffe0a2;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.sparkle-one {
+  top: 115px;
+  left: 12px;
+  font-size: 25px;
+}
+
+.sparkle-two {
+  top: 240px;
+  right: 9px;
+  font-size: 20px;
+}
+
+.sparkle-three {
+  bottom: 75px;
+  left: 20px;
+  font-size: 22px;
+}
+
 @media (max-width: 600px) {
-  .blush-order-guide { padding: 22px 12px; }
-  .blush-order-guide h2 { font-size: 29px; }
-  .blush-order-text { font-size: 15px; }
-  .blush-order-icon { font-size: 22px; }
-  .blush-order-number {
-    width: 42px;
-    height: 42px;
-    font-size: 23px;
+  .blush-order-guide {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 14px 25px;
+  }
+
+  .blush-order-text {
+    font-size: 15px;
   }
 }
 
@@ -643,6 +758,18 @@ body {
   
 
 <section class="blush-order-guide">
+
+<div class="blush-ribbon">
+  <span class="ribbon-loop left"></span>
+  <span class="ribbon-loop right"></span>
+  <span class="ribbon-tail left"></span>
+  <span class="ribbon-tail right"></span>
+  <span class="ribbon-knot"></span>
+</div>
+
+<div class="blush-sparkle sparkle-one">✦</div>
+<div class="blush-sparkle sparkle-two">✧</div>
+<div class="blush-sparkle sparkle-three">✦</div>
 
   <h2>איך מזמינים?</h2>
 
