@@ -515,6 +515,112 @@ body {
   }
 }
 
+/* BLUSH BEAUTY - Luxury order guide */
+
+.blush-order-guide {
+  direction: rtl;
+  padding: 28px 18px;
+  border: 2px solid #d5a14f;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 10% 10%, #fff8f6, transparent 55%),
+    linear-gradient(145deg, #ffe8e4, #f8d5d0);
+  box-shadow: 0 12px 30px #ad6b7330;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.blush-order-guide::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid #e9c38b;
+  border-radius: 22px;
+  pointer-events: none;
+}
+
+.blush-order-guide h2 {
+  font-size: 34px;
+  color: #921a38;
+  font-weight: 700;
+  margin: 8px 0 5px;
+}
+
+.blush-order-guide .subtitle {
+  display: inline-block;
+  padding: 9px 22px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #c56d7d, #a9445e);
+  color: white;
+  font-size: 17px;
+  margin: 12px 0 25px;
+  box-shadow: 0 5px 12px #a9445e30;
+}
+
+.blush-order-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff9f7d9;
+  border: 1px solid #f4d4ce;
+  border-radius: 40px;
+  padding: 14px 12px;
+  margin-bottom: 14px;
+  box-shadow: 0 5px 12px #a65c6020;
+  text-align: right;
+}
+
+.blush-order-number {
+  flex-shrink: 0;
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #e88b9c, #a62c4c);
+  border: 2px solid #d7a34c;
+  color: white;
+  font-size: 26px;
+  box-shadow: 0 3px 8px #a62c4c35;
+}
+
+.blush-order-text {
+  flex: 1;
+  font-size: 18px;
+  font-weight: bold;
+  color: #8e213b;
+  line-height: 1.5;
+}
+
+.blush-order-icon {
+  font-size: 27px;
+  color: #a62c4c;
+  padding: 0 8px;
+  border-right: 1px solid #d7a34c;
+}
+
+.blush-order-brand {
+  color: #951b3c;
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .blush-order-guide { padding: 22px 12px; }
+  .blush-order-guide h2 { font-size: 29px; }
+  .blush-order-text { font-size: 15px; }
+  .blush-order-icon { font-size: 22px; }
+  .blush-order-number {
+    width: 42px;
+    height: 42px;
+    font-size: 23px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -535,32 +641,56 @@ body {
 <div class="shop-layout">
 
   
-<aside class="order-guide" dir="rtl">
+
+<section class="blush-order-guide">
+
   <h2>איך מזמינים?</h2>
-  <div class="guide-decoration">✦ הזמנה פשוטה ונוחה ✦</div>
 
-  <div class="order-step">
-    <span class="step-number">1</span>
-    <span>בחרי את הגוונים שאת רוצה והוסיפי לסל</span>
+  <div class="subtitle">
+    🛒 הזמנה פשוטה ונוחה
   </div>
 
-  <div class="order-step">
-    <span class="step-number">2</span>
-    <span>מלאי את פרטי ההזמנה</span>
+  <div class="blush-order-step">
+    <span class="blush-order-number">1</span>
+    <span class="blush-order-text">
+      בחרי את הגוונים שאת רוצה
+      והוסיפי לסל
+    </span>
+    <span class="blush-order-icon">🛒</span>
   </div>
 
-  <div class="order-step">
-    <span class="step-number">3</span>
-    <span>לחצי על הכנת הזמנה לשליחה במייל</span>
+  <div class="blush-order-step">
+    <span class="blush-order-number">2</span>
+    <span class="blush-order-text">
+      מלאי את פרטי ההזמנה
+    </span>
+    <span class="blush-order-icon">✎</span>
   </div>
 
-  <div class="order-step">
-    <span class="step-number">4</span>
-    <span>אנחנו ניצור איתך קשר לאיסוף וקניה</span>
+  <div class="blush-order-step">
+    <span class="blush-order-number">3</span>
+    <span class="blush-order-text">
+      לחצי על הכנת הזמנה
+      לשליחה במייל
+    </span>
+    <span class="blush-order-icon">✉</span>
   </div>
 
-  <div class="guide-footer">BLUSH BEAUTY ♡</div>
-</aside>
+  <div class="blush-order-step">
+    <span class="blush-order-number">4</span>
+    <span class="blush-order-text">
+      אנחנו ניצור איתך קשר
+      לאיסוף וקניה
+    </span>
+    <span class="blush-order-icon">☎</span>
+  </div>
+
+  <div class="blush-order-brand">
+    BLUSH BEAUTY
+  </div>
+
+</section>
+
 
 
   <div class="shop-products">
