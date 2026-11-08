@@ -408,6 +408,113 @@ footer{
   margin-top: 20px;
 }
 
+/* מריחות מייקאפ עדינות ויוקרתיות */
+.makeup-smear,
+.makeup-swatch,
+.foundation-smear {
+  opacity: 0.22;
+  filter: blur(2px);
+}
+
+/* רקע ורוד שמנת רך */
+body {
+  background-color: #fff5f2;
+}
+
+/* שמירה על מראה אלגנטי */
+.makeup-smear,
+.makeup-swatch,
+.foundation-smear {
+  transition: opacity 0.3s ease;
+}
+
+/* BLUSH BEAUTY - Luxury Order Guide */
+
+.order-guide {
+  background: linear-gradient(
+    145deg,
+    #fffaf8 0%,
+    #fbe9e7 55%,
+    #f6dedc 100%
+  );
+  border: 1px solid #dfb69c;
+  border-radius: 24px;
+  padding: 30px 22px;
+  box-shadow:
+    0 12px 30px rgba(115, 48, 62, 0.12),
+    inset 0 1px 0 #ffffff;
+  direction: rtl;
+  text-align: center;
+}
+
+.order-guide h2 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  color: #872e42;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.guide-decoration {
+  color: #b78757;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 26px;
+}
+
+.order-guide .order-step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255,255,255,0.76);
+  border: 1px solid #efd4cc;
+  border-radius: 16px;
+  padding: 18px 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 5px 15px rgba(140,70,80,0.07);
+  color: #823346;
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.order-guide .step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: linear-gradient(
+    145deg, #d88e9b, #91364c
+  );
+  border: 2px solid #d6ac73;
+  color: white;
+  font-size: 24px;
+  font-family: Georgia, serif;
+  box-shadow: 0 3px 9px rgba(100,30,50,0.15);
+}
+
+.order-guide .order-step:hover {
+  background: #fffaf8;
+  transform: translateY(-2px);
+  transition: 0.25s ease;
+}
+
+@media (max-width: 600px) {
+  .order-guide {
+    padding: 24px 16px;
+  }
+
+  .order-guide h2 {
+    font-size: 27px;
+  }
+
+  .order-guide .order-step {
+    font-size: 15px;
+  }
+}
+
 </style>
 </head>
 <body>
