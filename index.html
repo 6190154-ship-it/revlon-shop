@@ -442,20 +442,27 @@ body {
     content: "";
     position: absolute;
     z-index: -1;
-    width: 125%;
-    height: 145px;
-    top: 22%;
-    left: -12%;
-    border-radius: 55% 15% 60% 20%;
-    transform: rotate(-28deg);
-    background: linear-gradient(
-        100deg,
-        transparent,
-        rgba(218,139,115,.35),
-        rgba(245,192,172,.75),
-        rgba(255,224,208,.65),
-        transparent
-    );
+    width: 165%;
+    height: 260px;
+    top: 12%;
+    left: -34%;
+    background: url("makeup-swatches.png")
+                center / contain no-repeat;
+    transform: rotate(-12deg);
+    opacity: .98;
+}
+
+.beauty-hero-bottle::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 150%;
+    height: 190px;
+    bottom: 3%;
+    left: -25%;
+    background: url("makeup-swatches-corner.png")
+                center / contain no-repeat;
+    transform: rotate(9deg);
 }
 
 .beauty-hero-bottle::after {
