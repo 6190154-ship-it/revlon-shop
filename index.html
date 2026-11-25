@@ -1898,6 +1898,132 @@ right -4vw top -7vw,
         object-fit: contain;
     }
 }
+   
+/* ===== FINAL BLUSH BEAUTY LUXURY DESIGN ===== */
+
+
+/* רקע ורוד פודרה אחיד ויוקרתי */
+
+@media(min-width:1201px) {
+
+    body {
+        background-image:
+            url("makeup-top-new.png"),
+
+            radial-gradient(
+                ellipse at 5% 40%,
+                #f3d9d5,
+                transparent 48%
+            ),
+
+            radial-gradient(
+                ellipse at 95% 10%,
+                #edc7d0,
+                transparent 48%
+            ),
+
+            linear-gradient(
+                135deg,
+                #f8e5e2,
+                #fff7f3,
+                #f2d3da
+            );
+
+        background-size:
+            34vw auto,
+            cover,
+            cover,
+            cover;
+
+        background-position:
+            right -4vw top -7vw,
+            center,
+            center,
+            center;
+
+        background-repeat: no-repeat;
+    }
+
+
+    /* כותרת בחירת הגוון */
+
+    .shop-products h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+
+        color: #781b38;
+        font-size: 29px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .shop-products h2::before,
+    .shop-products h2::after {
+        content: "";
+        display: block;
+        width: 85px;
+        height: 1px;
+        margin: 0;
+
+        background: linear-gradient(
+            90deg,
+            transparent,
+            #c9a16b,
+            transparent
+        );
+    }
+
+
+    /* עיגול המבצע בגוון בורדו */
+
+    .hero::after {
+
+        background: radial-gradient(
+            circle at 25% 20%,
+            #ca8199,
+            #a33c5b 50%,
+            #781b38 100%
+        );
+
+        border: 2px solid #e5c69a;
+        outline: 1px solid #c9a16b;
+        outline-offset: 4px;
+
+        color: #fff8ed;
+
+        box-shadow:
+            inset 0 0 20px rgba(255,255,255,.12),
+            0 10px 30px rgba(120,27,56,.20);
+    }
+
+
+    /* ליטוש מדריך ההזמנה */
+
+    .order-guide-image {
+        align-self: start;
+        margin-top: 85px;
+
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        overflow: hidden;
+    }
+
+    .order-guide-image img {
+        width: 100%;
+        height: auto;
+        max-width: none;
+
+        transform: scale(1.12);
+        transform-origin: center;
+
+        border-radius: 22px;
+    }
+
+}
+
 </style>
 </head>
 <body>
