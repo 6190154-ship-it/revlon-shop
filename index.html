@@ -1619,6 +1619,34 @@ right -4vw top -7vw,
         align-self: center;
     }
 }
+   /* ===== ORDER GUIDE PROPORTIONS ===== */
+
+@media(min-width:1201px) {
+
+    .shop-layout {
+        grid-template-columns:
+            minmax(300px,25vw)
+            minmax(0,1fr)
+            minmax(220px,17vw);
+
+        gap: 18px;
+    }
+
+    .order-guide-image {
+        width: 100%;
+        max-width: none;
+        align-self: start;
+        margin-top: 80px;
+        padding: 5px;
+    }
+
+    .order-guide-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: none;
+    }
+}
 </style>
 </head>
 <body>
