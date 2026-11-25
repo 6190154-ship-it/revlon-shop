@@ -1503,6 +1503,83 @@ right -4vw top -7vw,
         margin-top: 5px;
     }
 }
+   /* ===== LUXURY HEADER REFINEMENT ===== */
+
+@media(min-width:1201px) {
+
+    header {
+        padding-top: 12px;
+        padding-bottom: 0;
+    }
+
+    .logo {
+        font-size: clamp(42px,4.2vw,65px);
+        letter-spacing: 5px;
+        line-height: 1.1;
+        margin-bottom: 5px;
+    }
+
+    .hero {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-bottom: 0;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        font-weight: 700;
+        color: #79243e;
+        line-height: 1.2;
+        margin-top: 8px;
+        margin-bottom: 14px;
+    }
+
+    .hero p {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        line-height: 1.4;
+    }
+
+    .shop-layout {
+        margin-top: 0;
+    }
+
+    .shop-products h2 {
+        font-size: 29px;
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+
+    .shop-products h2::after {
+        margin: 6px auto;
+    }
+}
+   /* ===== LUXURY SALE BADGE ===== */
+
+@media(min-width:1201px) {
+    .hero::after {
+        width: 125px;
+        height: 125px;
+        font-size: 19px;
+        line-height: 1.4;
+        font-weight: 600;
+
+        background: radial-gradient(
+            circle at 25% 20%,
+            #dca7b5,
+            #b16e85 45%,
+            #80364e 90%
+        );
+
+        border: 2px solid #e2c69b;
+        outline: 1px solid #c9a16b;
+        outline-offset: 4px;
+
+        box-shadow:
+            inset 0 0 18px rgba(255,255,255,.15),
+            0 8px 25px rgba(121,54,75,.15);
+    }
+}
 </style>
 </head>
 <body>
