@@ -1457,6 +1457,52 @@ body {
         transform: translateX(-10px);
     }
 }
+   /* התאמת פרופורציות המשיחות לרקע */
+
+@media(min-width:851px) {
+    body {
+        background-size:
+            34vw auto,
+            cover,
+            cover,
+            cover;
+
+        background-position:
+            right -7vw top -2vw,
+            center,
+            center,
+            center;
+    }
+}
+   /* ===== התאמת פרופורציות הבקבוק הגדול ===== */
+
+@media(min-width:1201px) {
+    .beauty-hero-bottle img {
+        width: 140%;
+        max-width: 24vw;
+        max-height: 75vh;
+        object-fit: contain;
+        transform: translateX(-15px);
+    }
+}
+
+/* ===== צמצום המרווחים בחלק העליון ===== */
+
+@media(min-width:1201px) {
+    header {
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+
+    .hero {
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+
+    .shop-layout {
+        margin-top: 5px;
+    }
+}
 </style>
 </head>
 <body>
