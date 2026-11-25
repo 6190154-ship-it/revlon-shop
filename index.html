@@ -2317,6 +2317,166 @@ footer .footer-divider {
     }
 }
 
+/* ===== FINAL LUXURY DETAILS ===== */
+
+/* מדריך הזמנה */
+
+.order-guide-image {
+    background: linear-gradient(
+        145deg,
+        #fff4ed,
+        #f6d7d6
+    );
+    border: 1px solid #d4af7b;
+    border-radius: 26px;
+    padding: 8px;
+    box-sizing: border-box;
+    overflow: visible;
+    box-shadow:
+        0 12px 30px rgba(120,27,56,.10);
+}
+
+.order-guide-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: none !important;
+    border-radius: 20px;
+}
+
+
+/* התאמת המיקום במחשב */
+
+@media(min-width:1201px) {
+
+    .order-guide-image {
+        align-self: center;
+        margin-top: 0 !important;
+        margin-bottom: 0;
+    }
+
+    .beauty-hero-bottle {
+        margin-top: 15px !important;
+        align-self: start;
+    }
+}
+
+
+/* עיגול המבצע */
+
+.hero::after {
+    font-weight: 700;
+    line-height: 1.5;
+    box-shadow:
+        0 12px 30px rgba(120,27,56,.20),
+        inset 0 0 18px rgba(255,255,255,.15);
+}
+
+
+/* צמצום הרווחים בסל הקניות */
+
+section.cart {
+    padding: 25px 35px;
+}
+
+section.cart h2 {
+    margin: 10px 0 16px;
+}
+
+#cartItems {
+    padding: 15px 20px;
+}
+
+#total {
+    margin: 18px auto 22px;
+}
+
+
+/* שיפור קריאות טופס ההזמנה */
+
+#orderForm {
+    gap: 13px;
+}
+
+#orderForm input::placeholder,
+#orderForm textarea::placeholder {
+    color: #805361;
+    opacity: 1;
+}
+
+#orderForm input[type="tel"] {
+    text-align: right;
+}
+
+#orderForm textarea {
+    min-height: 90px;
+}
+
+section.cart .note {
+    color: #754554;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-top: 10px;
+}
+
+
+/* סמל סל קניות קבוע */
+
+#floatingCart {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #ad4564,
+        #781b38
+    );
+
+    color: #fff;
+    border: 1px solid #d4af7b;
+    border-radius: 40px;
+    padding: 12px 18px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 22px rgba(120,27,56,.25);
+}
+
+#floatingCartCount {
+    background: #fff7ed;
+    color: #781b38;
+    border-radius: 50%;
+    min-width: 26px;
+    height: 26px;
+    display: grid;
+    place-items: center;
+}
+
+
+/* התאמה לנייד */
+
+@media(max-width:850px) {
+
+    section.cart {
+        padding: 20px 15px;
+    }
+
+    #floatingCart {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 14px;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -2503,6 +2663,39 @@ renderProducts();
 renderAdditionalProducts();
 renderCart();
 </script>
+   
+<button id="floatingCart" type="button"
+onclick="document.querySelector('section.cart').scrollIntoView({behavior:'smooth'})">
+    🛒 הסל שלי
+    <span id="floatingCartCount">0</span>
+</button>
+
+<script>
+function updateFloatingCart() {
+    const counter = document.getElementById("floatingCartCount");
+
+    if (counter && typeof cart !== "undefined") {
+        counter.textContent = Object.values(cart)
+            .reduce((sum, q) => sum + (Number(q) || 0), 0);
+    }
+}
+
+const cartList = document.getElementById("cartItems");
+
+if (cartList) {
+    new MutationObserver(updateFloatingCart).observe(
+        cartList,
+        {
+            childList: true,
+            subtree: true,
+            characterData: true
+        }
+    );
+}
+
+updateFloatingCart();
+</script>
+
 </body>
 </html>
 ```[cite: 9, 10]
