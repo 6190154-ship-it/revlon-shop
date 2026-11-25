@@ -1316,6 +1316,59 @@ header {
             saturate(0.75)
             drop-shadow(8px 15px 18px rgba(115,61,50,.12));
 }
+   
+/* ===== ELEGANT PRODUCT CARDS ===== */
+
+#products .photo {
+    height: 180px;
+    background: transparent;
+}
+
+#products .photo img {
+    mix-blend-mode: multiply;
+}
+
+#products .card {
+    background: rgba(255,252,249,.72);
+    border: 1px solid rgba(190,151,109,.45);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(121,54,75,.06);
+}
+
+#products .card h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+}
+
+#products .price {
+    font-size: 26px;
+    padding: 5px 20px;
+    box-shadow: 0 4px 12px rgba(121,54,75,.12);
+}
+
+#products button {
+    background: linear-gradient(
+        120deg,#c58d9d,#99516a
+    ) !important;
+    transition: all .3s ease;
+}
+
+#products button:hover {
+    background: linear-gradient(
+        120deg,#a9677e,#79364b
+    ) !important;
+}
+
+@media(max-width:420px) {
+    #products .photo {
+        height: 150px;
+    }
+    #products .card h3 {
+        font-size: 14px;
+    }
+}
+
 </style>
 </head>
 <body>
