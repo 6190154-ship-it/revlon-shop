@@ -1,10 +1,10 @@
-shop-layout<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BLUSH BEAUTY | איפור וטיפוח</title>
-
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Heebo:wght@400;500;600;700&display=swap');
 
 /* =====================================
@@ -845,6 +845,285 @@ footer {
   }
 }
 
+/* ===== BLUSH BEAUTY - LUXURY DESIGN ===== */
+
+body {
+    background:
+        url("makeup-top.png") no-repeat right top,
+        url("makeup-bottom.png") no-repeat left 650px,
+        linear-gradient(135deg,#fff9f5,#f7e0e3,#fff5ee);
+    background-size: 390px auto, 420px auto, cover;
+    background-attachment: scroll;
+}
+
+header {
+    background: transparent;
+    box-shadow: none;
+    border-bottom: none;
+    padding: 25px 15px 15px;
+}
+
+.logo {
+    font-size: 65px;
+    color: #842b45;
+    letter-spacing: 5px;
+}
+
+.hero {
+    background: transparent;
+    border: none;
+    padding: 20px 15px 35px;
+    overflow: visible;
+}
+
+.hero h1 {
+    font-family: 'Assistant',Arial,sans-serif;
+    font-size: 46px;
+    font-weight: 600;
+    color: #842b45;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 19px;
+    color: #865363;
+}
+
+/* מבנה האתר */
+
+.shop-layout {
+    grid-template-columns: 245px minmax(0,1fr) 250px;
+    max-width: 1600px;
+    width: calc(100% - 30px);
+    gap: 25px;
+    margin: 15px auto 45px;
+    align-items: center;
+}
+
+/* מדריך הזמנה */
+
+.order-guide-image {
+    background: linear-gradient(145deg,#fffaf6,#f6e0e3);
+    border: 1px solid #d8b88d;
+    border-radius: 25px;
+    padding: 7px;
+    box-shadow: 0 12px 35px rgba(132,43,69,.12);
+}
+
+.order-guide-image img {
+    width: 100%;
+    border-radius: 19px;
+}
+
+/* כותרת המוצרים */
+
+.shop-products h2 {
+    font-size: 34px;
+    font-weight: 600;
+    color: #842b45;
+    margin-bottom: 20px;
+}
+
+.shop-products .note {
+    display: none;
+}
+
+/* סידור המוצרים */
+
+.grid {
+    grid-template-columns: repeat(8,minmax(0,1fr));
+    gap: 14px;
+}
+
+.grid > .card {
+    grid-column: span 2;
+}
+
+.grid > .card:nth-child(5) {
+    grid-column: 2 / span 2;
+}
+
+.card {
+    background: linear-gradient(145deg,#fffdfb,#fff0ed);
+    border: 1px solid #e3bfc4;
+    border-radius: 20px;
+    padding: 12px 8px;
+    box-shadow: 0 8px 20px rgba(132,43,69,.08);
+}
+
+.photo {
+    background: transparent;
+    height: 215px;
+    border-radius: 12px;
+}
+
+.photo img {
+    object-fit: contain;
+}
+
+/* מחירים */
+
+.old-price {
+    font-size: 22px;
+    color: #76535a;
+}
+
+.crossed-price::after {
+    background: #d6223b;
+    height: 2px;
+    transform: translate(-50%,-50%) rotate(-25deg);
+}
+
+.price {
+    font-size: 29px;
+    background: linear-gradient(135deg,#c46b83,#842b45);
+    border-radius: 10px;
+    padding: 5px 22px;
+}
+
+#products button {
+    background: linear-gradient(135deg,#cf8499,#a74461) !important;
+    border-radius: 10px !important;
+}
+
+/* הבקבוק הגדול בצד שמאל */
+
+.beauty-hero-bottle {
+    min-height: 540px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.beauty-hero-bottle::before,
+.beauty-hero-bottle::after {
+    display: none;
+}
+
+.beauty-hero-bottle img {
+    width: 145%;
+    max-width: 370px;
+    max-height: 530px;
+    transform: rotate(12deg);
+    mix-blend-mode: multiply;
+    background: transparent;
+    filter: drop-shadow(12px 18px 14px rgba(110,53,47,.20));
+}
+
+.bottle-caption {
+    display: none;
+}
+
+/* עיגול מבצע יוקרתי */
+
+.hero::after {
+    content: "מחיר מיוחד\A 39 ₪\A לזמן מוגבל!";
+    white-space: pre-line;
+    position: absolute;
+    left: 6%;
+    top: -65px;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Heebo',Arial,sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #fff8eb;
+    background: radial-gradient(circle at 30% 20%,#d28a9e,#842b45);
+    border: 3px solid #d8b47c;
+    box-shadow:
+        0 0 0 5px rgba(216,180,124,.25),
+        0 10px 30px rgba(132,43,69,.25);
+    animation: luxuryPulse 2.5s ease-in-out infinite;
+    z-index: 10;
+}
+
+@keyframes luxuryPulse {
+    0%,100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+/* התאמה למסכים קטנים */
+
+@media(max-width:1200px) {
+    .shop-layout {
+        grid-template-columns: 190px minmax(0,1fr) 180px;
+        gap: 12px;
+    }
+
+    .beauty-hero-bottle img {
+        width: 120%;
+    }
+
+    .photo {
+        height: 180px;
+    }
+}
+
+@media(max-width:850px) {
+    .shop-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        font-size: 43px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero::after {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 20px auto 0;
+        width: 115px;
+        height: 115px;
+        font-size: 17px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4,minmax(0,1fr));
+    }
+
+    .grid > .card,
+    .grid > .card:nth-child(5) {
+        grid-column: span 2;
+    }
+
+    .beauty-hero-bottle {
+        min-height: 300px;
+    }
+
+    .beauty-hero-bottle img {
+        width: 180px;
+        max-height: 280px;
+    }
+
+    body {
+        background-size: 180px auto,200px auto,cover;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .hero::after {
+        animation: none;
+    }
+}
+
+</style>
 </head>
 <body>
 <header>
@@ -852,8 +1131,7 @@ footer {
 <div>איפור וטיפוח במחירים שכיף לגלות</div>
 </header>
 <div class="hero">
-<h1>המייקאפ שאת אוהבת<br>במחיר שתאהבי!</h1>
-
+<h1>מראה מושלם במחיר מדהים!</h1>
 <p>REVLON COLORSTAY<br>
 הגוונים המבוקשים • איסוף ממרכז בני ברק<br>
 </p>
