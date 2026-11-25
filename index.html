@@ -1678,7 +1678,157 @@ right -4vw top -7vw,
         max-width: none;
         border-radius: 20px;
     }
-}  
+}  /* ===== ORDER GUIDE FINAL REFINEMENT ===== */
+
+@media(min-width:1201px) {
+
+    .order-guide-image {
+        align-self: start;
+        margin-top: 110px;
+        padding: 0;
+        overflow: hidden;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .order-guide-image img {
+        width: 100%;
+        height: auto;
+        max-width: none;
+        display: block;
+
+        transform: scale(1.09);
+        transform-origin: center;
+    }
+}
+   
+/* ===== LUXURY PRODUCT CARDS ===== */
+
+@media(min-width:1201px) {
+
+    #products {
+        gap: 14px;
+        margin-top: 12px;
+        align-items: stretch;
+    }
+
+    /* עיצוב הכרטיסים */
+
+    #products .card {
+        min-height: 0;
+        height: auto;
+        padding: 10px 9px 12px;
+        border-radius: 22px;
+
+        background: linear-gradient(
+            145deg,
+            #fff9f5,
+            #fce9e6
+        );
+
+        border: 2px solid #ffffff;
+
+        box-shadow:
+            0 5px 15px rgba(121,54,75,.10);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* תמונות המוצרים */
+
+    #products .photo {
+        width: 100%;
+        height: 175px;
+        min-height: 0;
+        margin: 0;
+        background: transparent;
+    }
+
+    #products .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    /* שמות המוצרים */
+
+    #products .card h3 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.3;
+        margin: 5px 0;
+        min-height: 42px;
+        color: #673444;
+    }
+
+    /* מחיר קודם */
+
+    #products .old-price {
+        font-size: 20px;
+        margin: 0;
+        line-height: 1.3;
+    }
+
+    #products .crossed-price::after {
+        background: #d6223b;
+        height: 2px;
+    }
+
+    /* מחיר מבצע */
+
+    #products .price {
+        font-size: 27px;
+        font-weight: 700;
+        line-height: 1.2;
+        padding: 4px 23px;
+        margin: 2px auto 5px;
+        border-radius: 30px;
+
+        background: linear-gradient(
+            135deg,
+            #ad4564,
+            #781b38
+        );
+
+        color: white;
+        box-shadow: 0 3px 8px rgba(121,54,75,.15);
+    }
+
+    /* כפתור הוספה לסל */
+
+    #products button {
+        width: 94%;
+        min-height: 34px;
+        height: auto;
+        padding: 7px 10px !important;
+        margin: auto 0 0;
+        font-size: 14px;
+        border-radius: 30px !important;
+
+        background: linear-gradient(
+            135deg,
+            #b75a76,
+            #79243e
+        ) !important;
+
+        border: 1px solid #b66b80;
+        color: white;
+        box-shadow: 0 3px 8px rgba(121,54,75,.15);
+    }
+
+    #products button:hover {
+        background: linear-gradient(
+            135deg,
+            #9f3e5c,
+            #64152e
+        ) !important;
+    }
+}
+
 </style>
 </head>
 <body>
