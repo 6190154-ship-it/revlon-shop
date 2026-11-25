@@ -2024,6 +2024,299 @@ right -4vw top -7vw,
 
 }
 
+/* ===== BLUSH BEAUTY FINAL LUXURY DESIGN ===== */
+
+
+/* התאמת מיקום מדריך ההזמנה */
+
+@media(min-width:1201px) {
+    .order-guide-image {
+        margin-top: 70px;
+    }
+}
+
+
+/* ===== סל הקניות ===== */
+
+section.cart {
+    max-width: 1050px;
+    width: calc(100% - 32px);
+    box-sizing: border-box;
+    margin: 45px auto;
+    padding: 35px;
+
+    background: linear-gradient(
+        145deg,
+        #fffaf6,
+        #f9e5e3
+    );
+
+    border: 1px solid #d9b78c;
+    border-radius: 28px;
+
+    box-shadow:
+        0 12px 35px rgba(120,27,56,.10),
+        inset 0 0 0 5px rgba(255,255,255,.6);
+}
+
+
+/* כותרות סל הקניות ופרטי ההזמנה */
+
+section.cart h2 {
+    color: #781b38;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin: 15px 0 22px;
+}
+
+section.cart h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    margin: 12px auto;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #c9a16b,
+        transparent
+    );
+}
+
+
+/* רשימת המוצרים בסל */
+
+#cartItems {
+    background: rgba(255,255,255,.65);
+    border: 1px solid #ead3c7;
+    border-radius: 18px;
+    padding: 20px;
+    color: #673444;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* סכום ההזמנה */
+
+#total {
+    background: linear-gradient(
+        135deg,
+        #a33c5b,
+        #781b38
+    );
+
+    color: #ffffff;
+    border: 1px solid #d4af7b;
+    border-radius: 30px;
+    padding: 12px 28px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 22px auto 35px;
+    font-size: 24px;
+    font-weight: 700;
+
+    box-shadow: 0 5px 15px rgba(120,27,56,.15);
+}
+
+
+/* ===== טופס פרטי ההזמנה ===== */
+
+#orderForm {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 16px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+#orderForm input,
+#orderForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 52px;
+    padding: 14px 18px;
+
+    background: #fffcf9;
+    border: 1px solid #dfc2b8;
+    border-radius: 16px;
+
+    font-family: inherit;
+    font-size: 16px;
+    color: #673444;
+
+    outline: none;
+    transition: .25s ease;
+}
+
+#orderForm input::placeholder,
+#orderForm textarea::placeholder {
+    color: #99727c;
+}
+
+#orderForm input:focus,
+#orderForm textarea:focus {
+    border-color: #a33c5b;
+    box-shadow: 0 0 0 3px rgba(163,60,91,.10);
+    background: #ffffff;
+}
+
+#orderForm #email,
+#orderForm textarea {
+    grid-column: 1 / -1;
+}
+
+#orderForm textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+
+/* ===== כפתור שליחת ההזמנה ===== */
+
+#orderForm button[type="submit"] {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 520px;
+    justify-self: center;
+
+    padding: 16px 25px !important;
+    margin: 12px auto;
+    border-radius: 40px !important;
+
+    background: linear-gradient(
+        135deg,
+        #b45270,
+        #781b38
+    ) !important;
+
+    border: 1px solid #d4af7b;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+
+    box-shadow:
+        0 7px 22px rgba(120,27,56,.22),
+        inset 0 1px 2px rgba(255,255,255,.25);
+
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+#orderForm button[type="submit"]:hover {
+    background: linear-gradient(
+        135deg,
+        #a33c5b,
+        #64152e
+    ) !important;
+
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(120,27,56,.28);
+}
+
+
+/* הסבר מתחת לכפתור */
+
+section.cart .note {
+    text-align: center;
+    color: #805764;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 15px auto 0;
+    max-width: 650px;
+}
+
+
+/* ===== הפס התחתון של האתר ===== */
+
+footer {
+    background: linear-gradient(
+        110deg,
+        #781b38,
+        #a33c5b,
+        #781b38
+    ) !important;
+
+    color: #fff7ed !important;
+    border-top: 2px solid #d4af7b;
+    padding: 20px 25px;
+
+    box-shadow: 0 -5px 25px rgba(120,27,56,.10);
+}
+
+footer .footer-row {
+    gap: 25px;
+    align-items: center;
+}
+
+footer .footer-brand {
+    font-family: "Cormorant Garamond",serif;
+    font-size: 29px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #fff7ed;
+}
+
+footer a {
+    color: #fff7ed !important;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #efd3a4 !important;
+}
+
+footer .footer-divider {
+    background: #d4af7b;
+    width: 1px;
+    height: 28px;
+    opacity: .85;
+}
+
+
+/* ===== התאמה לטלפון נייד ===== */
+
+@media(max-width:850px) {
+
+    section.cart {
+        width: calc(100% - 24px);
+        padding: 20px 15px;
+        margin: 25px auto;
+        border-radius: 22px;
+    }
+
+    section.cart h2 {
+        font-size: 23px;
+    }
+
+    #orderForm {
+        grid-template-columns: minmax(0,1fr);
+        gap: 12px;
+    }
+
+    #orderForm button[type="submit"] {
+        font-size: 17px;
+        padding: 14px !important;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    footer .footer-brand {
+        font-size: 23px;
+    }
+
+    footer a {
+        font-size: 15px;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -2075,7 +2368,7 @@ right -4vw top -7vw,
 <input id="phone" type="tel" placeholder="מספר טלפון" required>
 <input id="email" type="email" placeholder="כתובת מייל (לא חובה)">
 <textarea id="notes" rows="3" placeholder="הערות להזמנה"></textarea>
-<button type="submit">הכנת הזמנה לשליחה במייל</button>
+<button type="submit">הזמנה לשליחה במייל</button>
 </form>
 <p class="note">
 אין תשלום באתר. לחיצה על הכפתור תפתח הודעת מייל
