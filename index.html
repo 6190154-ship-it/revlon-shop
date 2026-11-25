@@ -1647,6 +1647,38 @@ right -4vw top -7vw,
         max-width: none;
     }
 }
+ /* ===== NEW ORDER GUIDE DESIGN ===== */
+
+@media(min-width:1201px) {
+
+    .shop-layout {
+        grid-template-columns:
+            minmax(280px,20vw)
+            minmax(0,1fr)
+            minmax(220px,17vw);
+
+        gap: 18px;
+    }
+
+    .order-guide-image {
+        width: 100%;
+        max-width: none;
+        align-self: center;
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .order-guide-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: none;
+        border-radius: 20px;
+    }
+}  
 </style>
 </head>
 <body>
@@ -1667,7 +1699,7 @@ right -4vw top -7vw,
 
   
 <aside class="order-guide-image" dir="rtl">
-<img src="order-guide.png.png" alt="איך מזמינים? מדריך בארבעה צעדים"></aside>
+<img src="order-guide-new.png" alt="איך מזמינים? מדריך בארבעה צעדים"></aside>
 
 
  <div class="shop-products">
