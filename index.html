@@ -1396,6 +1396,60 @@ body {
     mix-blend-mode: normal;
     filter: none;
 }
+   /* ניקוי הרקע מאחורי הבקבוק הגדול */
+
+body {
+    background-image:
+        url("makeup-top.png"),
+        radial-gradient(ellipse at 10% 35%,#efd0c4,transparent 35%),
+        radial-gradient(ellipse at 95% 15%,#edc5ce,transparent 35%),
+        linear-gradient(125deg,#fff9f3,#f8e5e4,#fff6ef);
+
+    background-size: 420px auto,cover,cover,cover;
+    background-position: right top,center,center,center;
+    background-repeat: no-repeat;
+}
+   
+/* ===== LUXURY TOP CORNER SWATCHES ===== */
+
+body {
+    background-image:
+        url("makeup-top.png"),
+        radial-gradient(ellipse at 10% 35%,
+            #efd0c4,transparent 35%),
+        radial-gradient(ellipse at 95% 15%,
+            #edc5ce,transparent 35%),
+        linear-gradient(125deg,
+            #fff9f3,#f8e5e4,#fff6ef);
+
+    background-size:
+        480px auto,
+        cover,
+        cover,
+        cover;
+
+    background-position:
+        right -100px top -65px,
+        center,
+        center,
+        center;
+
+    background-repeat: no-repeat;
+}
+
+/* התאמה למסך נייד */
+
+@media(max-width:850px) {
+    body {
+        background-size:
+            200px auto,cover,cover,cover;
+
+        background-position:
+            right -75px top -40px,
+            center,center,center;
+    }
+}
+
 </style>
 </head>
 <body>
