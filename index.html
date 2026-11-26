@@ -198,10 +198,7 @@ header > div:not(.logo) {
     height: 1px;
     width: 75px;
     background: linear-gradient(
-        90deg,
-        transparent,
-        #c99b5b,
-        transparent
+        90deg,transparent,#c99b5b,transparent
     );
 }
 
@@ -238,8 +235,9 @@ header > div:not(.logo) {
     grid-column: 1;
     grid-row: 2;
     position: relative;
-    align-self: stretch;
-    min-height: 0;
+    align-self: start;
+    justify-self: center;
+    width: 92%;
     min-width: 0;
     border-radius: 24px;
     overflow: hidden;
@@ -247,11 +245,10 @@ header > div:not(.logo) {
 }
 
 .order-guide-image img {
-    position: absolute;
-    inset: 0;
+    position: static;
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
     object-position: center top;
     border-radius: 24px;
@@ -297,9 +294,7 @@ header > div:not(.logo) {
     border: 2px solid white;
     border-radius: 22px;
     background: linear-gradient(
-        145deg,
-        #fff9f5,
-        #fce9e6
+        145deg,#fff9f5,#fce9e6
     );
     box-shadow: 0 5px 15px #79364b1a;
     text-align: center;
@@ -394,9 +389,7 @@ header > div:not(.logo) {
     line-height: 1.2;
     color: white;
     background: linear-gradient(
-        135deg,
-        #ad4564,
-        #781b38
+        135deg,#ad4564,#781b38
     );
     border: 1px solid #cba77b;
     border-radius: 30px;
@@ -413,9 +406,7 @@ button {
     font-weight: 700;
     color: white;
     background: linear-gradient(
-        135deg,
-        #b75a76,
-        #79243e
+        135deg,#b75a76,#79243e
     );
     border: 1px solid #b66b80;
     border-radius: 12px;
@@ -426,9 +417,7 @@ button {
 
 button:hover {
     background: linear-gradient(
-        135deg,
-        #9f3e5c,
-        #64152e
+        135deg,#9f3e5c,#64152e
     );
 }
 
@@ -455,9 +444,7 @@ button:hover {
     padding: 25px;
     border-radius: 24px;
     background: linear-gradient(
-        140deg,
-        #fffaf7,
-        #fcebed
+        140deg,#fffaf7,#fcebed
     );
     border: 1px solid var(--gold-light);
     box-shadow: var(--shadow);
@@ -479,9 +466,7 @@ button:hover {
     margin: 45px auto 35px;
     padding: clamp(22px,3vw,42px);
     background: linear-gradient(
-        145deg,
-        #fffaf6,
-        #f9e6e4
+        145deg,#fffaf6,#f9e6e4
     );
     border: 1px solid #d4ad79;
     border-radius: 28px;
@@ -509,10 +494,7 @@ button:hover {
     height: 1px;
     margin: 12px auto 0;
     background: linear-gradient(
-        90deg,
-        transparent,
-        #c99b5b,
-        transparent
+        90deg,transparent,#c99b5b,transparent
     );
 }
 
@@ -563,9 +545,7 @@ button:hover {
     border-radius: 50px;
     color: #fff;
     background: linear-gradient(
-        135deg,
-        #ad4564,
-        #781b38
+        135deg,#ad4564,#781b38
     );
     box-shadow: 0 5px 14px #79364b20;
 }
@@ -591,18 +571,21 @@ button:hover {
     background: #fffdfb;
     color: #603b45;
     font-family: Assistant,Arial,sans-serif;
-    font-size: 17px;
+    font-size: 20px;
+    font-weight: 500;
     transition: border .2s ease,box-shadow .2s ease;
 }
 
 #orderForm input {
-    min-height: 52px;
+    min-height: 56px;
 }
 
 #orderForm input::placeholder,
 #orderForm textarea::placeholder {
-    color: #956773;
+    color: #80535f;
     opacity: 1;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 #orderForm input[type=email] {
@@ -634,18 +617,14 @@ button:hover {
     border: 1px solid #d4ad79;
     font-size: 20px;
     background: linear-gradient(
-        120deg,
-        #a43d5d,
-        #68152f
+        120deg,#a43d5d,#68152f
     );
     box-shadow: 0 9px 22px #79364b30;
 }
 
 #orderForm button:hover {
     background: linear-gradient(
-        120deg,
-        #91304e,
-        #581127
+        120deg,#91304e,#581127
     );
 }
 
@@ -666,30 +645,45 @@ textarea {
     color: #79525c;
 }
 
-/* FOOTER */
+/* FOOTER - MOVING CONTACT DETAILS */
 
 footer {
     position: relative;
     background: linear-gradient(
-        110deg,
-        #76243e,
-        #b34f6a,
-        #8b304b
+        110deg,#76243e,#b34f6a,#8b304b
     );
     color: white;
-    padding: 23px 20px;
+    padding: 23px 0;
     margin-top: 45px;
     border-top: 2px solid var(--gold-light);
     box-shadow: 0 -5px 20px rgba(132,43,69,.08);
+    overflow: hidden;
+}
+
+.footer-marquee {
+    width: 100%;
+    overflow: hidden;
+    direction: ltr;
+}
+
+.footer-track {
+    display: flex;
+    width: max-content;
+    animation: footerScroll 35s linear infinite;
+    will-change: transform;
 }
 
 .footer-row {
     display: flex;
+    flex: 0 0 auto;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
+    flex-wrap: nowrap;
+    gap: 25px;
+    padding: 0 45px;
+    min-width: 100vw;
+    direction: rtl;
 }
 
 .footer-row span,
@@ -701,7 +695,8 @@ footer {
     text-decoration: none;
     white-space: nowrap;
     font-family: Assistant,Arial,sans-serif;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .footer-row a:hover {
@@ -710,7 +705,7 @@ footer {
 
 .footer-brand {
     font-family: 'Cormorant Garamond',Georgia,serif !important;
-    font-size: 27px !important;
+    font-size: 29px !important;
     font-weight: 600;
     letter-spacing: 1.5px;
 }
@@ -719,6 +714,20 @@ footer {
     width: 1px;
     height: 25px;
     background: rgba(255,255,255,.55);
+}
+
+@keyframes footerScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.footer-marquee:hover .footer-track,
+.footer-marquee:focus-within .footer-track {
+    animation-play-state: paused;
 }
 
 /* FLOATING CART */
@@ -735,9 +744,7 @@ footer {
     border-radius: 40px;
     padding: 12px 18px;
     background: linear-gradient(
-        135deg,
-        #ad4564,
-        #781b38
+        135deg,#ad4564,#781b38
     );
 }
 
@@ -871,7 +878,7 @@ footer {
     .order-guide-image {
         order: 2;
         align-self: center;
-        width: min(100%,360px);
+        width: min(92%,330px);
     }
 
     .order-guide-image img {
@@ -906,6 +913,13 @@ footer {
         gap: 12px;
     }
 
+    #orderForm input,
+    #orderForm textarea,
+    #orderForm input::placeholder,
+    #orderForm textarea::placeholder {
+        font-size: 18px;
+    }
+
     #orderForm button {
         min-width: 0;
         width: 100%;
@@ -913,12 +927,13 @@ footer {
     }
 
     .footer-row {
-        flex-direction: column;
-        gap: 12px;
+        gap: 22px;
+        padding: 0 30px;
     }
 
-    .footer-divider {
-        display: none;
+    .footer-row span,
+    .footer-row a {
+        font-size: 18px;
     }
 
     footer {
@@ -944,6 +959,21 @@ footer {
 
     .card {
         transition: none;
+    }
+
+    .footer-track {
+        animation: none;
+        width: 100%;
+    }
+
+    .footer-row {
+        width: 100%;
+        min-width: 0;
+        flex-wrap: wrap;
+    }
+
+    .footer-row[aria-hidden="true"] {
+        display: none;
     }
 }
 
@@ -1081,33 +1111,79 @@ footer {
 
 <footer dir="rtl">
 
-    <div class="footer-row">
+    <div class="footer-marquee">
 
-        <span class="footer-brand">
-            BLUSH BEAUTY
-        </span>
+        <div class="footer-track">
 
-        <span class="footer-divider"></span>
+            <div class="footer-row">
 
-        <a href="tel:0533190439">
-            &#9742; להזמנות: 053-3190439
-        </a>
+                <span class="footer-brand">
+                    BLUSH BEAUTY
+                </span>
 
-        <span class="footer-divider"></span>
+                <span class="footer-divider"></span>
 
-        <a href="mailto:rw46011@gmail.com">
-            &#9993; rw46011@gmail.com
-        </a>
+                <a href="tel:0533190439">
+                    &#9742; להזמנות: 053-3190439
+                </a>
 
-        <span class="footer-divider"></span>
+                <span class="footer-divider"></span>
 
-        <span>
-            &#128205; איסוף ממרכז בני ברק בתיאום מראש
-        </span>
+                <a href="mailto:rw46011@gmail.com">
+                    &#9993; rw46011@gmail.com
+                </a>
+
+                <span class="footer-divider"></span>
+
+                <span>
+                    &#128205; איסוף ממרכז בני ברק בתיאום מראש
+                </span>
+
+            </div>
+
+            <div class="footer-row" aria-hidden="true">
+
+                <span class="footer-brand">
+                    BLUSH BEAUTY
+                </span>
+
+                <span class="footer-divider"></span>
+
+                <a href="tel:0533190439" tabindex="-1">
+                    &#9742; להזמנות: 053-3190439
+                </a>
+
+                <span class="footer-divider"></span>
+
+                <a href="mailto:rw46011@gmail.com" tabindex="-1">
+                    &#9993; rw46011@gmail.com
+                </a>
+
+                <span class="footer-divider"></span>
+
+                <span>
+                    &#128205; איסוף ממרכז בני ברק בתיאום מראש
+                </span>
+
+            </div>
+
+        </div>
 
     </div>
 
 </footer>
+
+<button
+    id="floatingCart"
+    type="button"
+    onclick="document.querySelector('section.cart').scrollIntoView({behavior:'smooth'})"
+>
+
+    🛒 הסל שלי
+
+    <span id="floatingCartCount">0</span>
+
+</button>
 
 <script>
 
@@ -1228,6 +1304,21 @@ function change(id,delta) {
 
 }
 
+function updateFloatingCart() {
+
+    const counter =
+        document.getElementById("floatingCartCount");
+
+    if(counter) {
+
+        counter.textContent = Object.values(cart).reduce(
+            (sum,q) => sum + (Number(q) || 0),0
+        );
+
+    }
+
+}
+
 function renderCart() {
 
     let total = 0;
@@ -1286,6 +1377,8 @@ function renderCart() {
 
     document.getElementById("total").textContent =
         "סה״כ: " + money(total);
+
+    updateFloatingCart();
 
 }
 
@@ -1375,58 +1468,6 @@ renderProducts();
 renderAdditionalProducts();
 
 renderCart();
-
-</script>
-
-<button
-    id="floatingCart"
-    type="button"
-    onclick="document.querySelector('section.cart').scrollIntoView({behavior:'smooth'})"
->
-
-    🛒 הסל שלי
-
-    <span id="floatingCartCount">0</span>
-
-</button>
-
-<script>
-
-function updateFloatingCart() {
-
-    const counter =
-        document.getElementById("floatingCartCount");
-
-    if(counter && typeof cart !== "undefined") {
-
-        counter.textContent = Object.values(cart).reduce(
-            (sum,q) => sum + (Number(q) || 0),0
-        );
-
-    }
-
-}
-
-const cartList =
-    document.getElementById("cartItems");
-
-if(cartList) {
-
-    new MutationObserver(updateFloatingCart).observe(
-
-        cartList,
-
-        {
-            childList: true,
-            subtree: true,
-            characterData: true
-        }
-
-    );
-
-}
-
-updateFloatingCart();
 
 </script>
 
