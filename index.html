@@ -214,7 +214,59 @@ footer {
 @media(max-width:1200px) and (min-width:851px){.shop-layout{grid-template-columns:21% minmax(0,1fr) 16%;gap:10px;padding:0 10px}.grid{gap:8px}.card{padding:8px 5px}.card h3{font-size:14px}.price{font-size:23px;padding:4px 15px}.beauty-hero-bottle img{width:115%;transform:translateY(-20px)}}
 @media(max-width:850px){body{background-size:200px auto,auto,auto,auto;background-position:right -75px top -40px,center,center,center}.logo{font-size:43px;letter-spacing:2px}.hero{padding:15px 12px}.hero::after{position:relative;top:auto;left:auto;margin:15px auto 0;width:105px;height:105px;font-size:17px}.shop-layout{display:flex;flex-direction:column;align-items:center;width:100%;padding:0 12px;gap:18px}.shop-products{display:block;order:1;width:100%}.shop-products h2{font-size:26px;margin:0 0 15px}.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.grid>.card,.grid>.card:nth-child(5){grid-column:span 2}.photo{height:165px}.card h3{font-size:14px}.price{font-size:23px}.order-guide-image{order:2;align-self:center;width:min(100%,360px)}.order-guide-image img{position:static;width:100%;height:auto}.beauty-hero-bottle{order:3;width:100%}.beauty-hero-bottle img{width:220px;max-width:75%;transform:none}.cart{width:calc(100% - 24px);padding:20px 14px;margin:25px auto}#orderForm{grid-template-columns:1fr}#orderForm button{min-width:0;width:100%}.footer-row{flex-direction:column;gap:12px}.footer-divider{display:none}#floatingCart{bottom:15px;right:15px;padding:10px 14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero::after{animation:none}.card{transition:none}}
+/* ===== BLUSH BEAUTY - FINAL LUXURY TOUCH ===== */
 
+/* הגדלת הבקבוקים בכרטיסי המוצרים */
+#products .photo img {
+    transform: scale(1.15);
+    transform-origin: center center;
+}
+
+#products .photo {
+    overflow: visible;
+}
+
+/* כפתורי הוספה לסל ברורים יותר */
+#products .card button {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    min-height: 34px;
+    border-radius: 50px !important;
+}
+
+/* עיגול פינות מדריך ההזמנה */
+.order-guide-image {
+    border-radius: 24px !important;
+    overflow: hidden;
+    background: transparent !important;
+}
+
+.order-guide-image img {
+    border-radius: 24px !important;
+    object-fit: contain !important;
+}
+
+/* מיקום מאוזן של הבקבוק הגדול */
+@media (min-width: 851px) {
+    .beauty-hero-bottle {
+        align-items: center !important;
+    }
+
+    .beauty-hero-bottle img {
+        transform: translate(-10px, 0) !important;
+    }
+}
+
+/* התאמה לטלפונים ניידים */
+@media (max-width: 850px) {
+    #products .photo img {
+        transform: scale(1.08);
+    }
+
+    #products .card button {
+        font-size: 14px !important;
+    }
+}
 </style>
 </head>
 <body>
