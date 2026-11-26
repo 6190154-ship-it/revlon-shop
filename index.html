@@ -1,534 +1,1433 @@
+
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BLUSH BEAUTY | איפור וטיפוח</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Heebo:wght@400;500;600;700&display=swap');
-:root{--wine:#842b45;--wine-dark:#682037;--gold:#c99b5b;--gold-light:#ead3a8;--text:#663c45;--muted:#99747b;--shadow:0 12px 32px rgba(119,48,68,.10)}
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;font-family:Assistant,Arial,sans-serif;color:var(--text);background:url('makeup-top-new.png') right -4vw top -7vw / 34vw auto no-repeat,radial-gradient(ellipse at 5% 40%,#f3d9d5,transparent 48%),radial-gradient(ellipse at 95% 10%,#edc7d0,transparent 48%),linear-gradient(135deg,#f8e5e2,#fff7f3,#f2d3da);overflow-x:hidden}
-header{text-align:center;padding:8px 15px 0}.logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(42px,3.8vw,65px);font-weight:500;letter-spacing:5px;color:#79364b;line-height:1.05}header>div:not(.logo){font-size:18px;color:#794052;margin-top:6px}
+
+:root {
+    --wine: #842b45;
+    --wine-dark: #682037;
+    --gold: #c99b5b;
+    --gold-light: #ead3a8;
+    --text: #663c45;
+    --muted: #99747b;
+    --shadow: 0 12px 32px rgba(119,48,68,.10);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Assistant,Arial,sans-serif;
+    color: var(--text);
+    background:
+        url('makeup-top-new.png') right -4vw top -7vw / 34vw auto no-repeat,
+        radial-gradient(ellipse at 5% 40%,#f3d9d5,transparent 48%),
+        radial-gradient(ellipse at 95% 10%,#edc7d0,transparent 48%),
+        linear-gradient(135deg,#f8e5e2,#fff7f3,#f2d3da);
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 5px 15px 0;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond',Georgia,serif;
+    font-size: clamp(42px,3.8vw,65px);
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: #79364b;
+    line-height: 1.05;
+}
+
+header > div:not(.logo) {
+    font-size: 18px;
+    color: #794052;
+    margin-top: 6px;
+}
+
 .logo::before {
-  content: "";
-  display: block;
-  width: 190px;
-  height: 30px;
-  margin: 0 auto 7px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 44'%3E%3Cpath d='M140 29 C132 22 124 15 129 9 C134 3 140 10 140 13 C146 3 155 6 154 14 C153 20 145 26 140 29Z' fill='none' stroke='%23b95c75' stroke-width='1.8'/%3E%3Cpath d='M30 21 H116 M164 21 H250' stroke='%23b95c75' stroke-width='1'/%3E%3Ccircle cx='120' cy='21' r='2' fill='%23c99b5b'/%3E%3Ccircle cx='160' cy='21' r='2' fill='%23c99b5b'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+    content: "";
+    display: block;
+    width: 190px;
+    height: 24px;
+    margin: 0 auto 4px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 44'%3E%3Cpath d='M140 29 C132 22 124 15 129 9 C134 3 140 10 140 13 C146 3 155 6 154 14 C153 20 145 26 140 29Z' fill='none' stroke='%23b95c75' stroke-width='1.8'/%3E%3Cpath d='M30 21 H116 M164 21 H250' stroke='%23b95c75' stroke-width='1'/%3E%3Ccircle cx='120' cy='21' r='2' fill='%23c99b5b'/%3E%3Ccircle cx='160' cy='21' r='2' fill='%23c99b5b'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
+/* HERO */
 
-.hero{position:relative;text-align:center;padding:8px 150px 12px}.hero h1{font-family:Assistant,Arial,sans-serif;font-size:clamp(28px,2.5vw,40px);line-height:1.2;color:#79243e;margin:8px 0 12px;font-weight:700}.hero p{font-size:18px;color:#865363;line-height:1.5;margin:0}.hero p::first-line{font-family:'Cormorant Garamond',Georgia,serif;font-size:27px;letter-spacing:1.5px;color:var(--wine)}
-.hero::after{content:'מחיר מיוחד\A 39 ₪\A לזמן מוגבל!';white-space:pre-line;position:absolute;left:6%;top:-55px;width:115px;height:115px;border-radius:50%;display:grid;place-content:center;text-align:center;font-size:19px;font-weight:700;line-height:1.4;color:#fff8eb;background:radial-gradient(circle at 25% 20%,#dca7b5,#b16e85 45%,#80364e 90%);border:2px solid #e2c69b;outline:1px solid #c9a16b;outline-offset:4px;box-shadow:0 8px 25px #79364b26;animation:pulse 2.8s ease-in-out infinite}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.09)}}
-/* Three columns, shared heading and product row. Guide cannot determine row height. */
-.shop-layout{display:grid;grid-template-columns:minmax(0,21%) minmax(0,1fr) minmax(0,18%);grid-template-rows:auto auto;gap:12px 18px;width:100%;max-width:1900px;margin:0 auto 32px;padding:0 18px;align-items:start;direction:rtl}
-.shop-products{display:contents}.shop-products h2{grid-column:2;grid-row:1;display:flex;align-items:center;justify-content:center;gap:18px;font-family:Heebo,Arial,sans-serif;font-size:29px;font-weight:600;color:#842b45;margin:4px 0;text-align:center}.shop-products h2::before,.shop-products h2::after{content:'';height:1px;width:75px;background:linear-gradient(90deg,transparent,#c99b5b,transparent)}.shop-products .note{display:none}
-.grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:14px;width:100%;margin:0 auto}.grid>.card{grid-column:span 2}.grid>.card:nth-child(5){grid-column:2/span 2}#products{grid-column:2;grid-row:2;align-items:stretch;grid-auto-rows:1fr}
-.order-guide-image{grid-column:1;grid-row:2;position:relative;align-self:stretch;min-height:0;min-width:0}.order-guide-image img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;object-position:center top;border-radius:20px}
-.beauty-hero-bottle{grid-column:3;grid-row:2;position:relative;display:flex;justify-content:center;align-items:flex-start;min-width:0;pointer-events:none}.beauty-hero-bottle img{display:block;width:125%;max-width:25vw;height:auto;object-fit:contain;transform:translate(-10px,-55px)}.bottle-caption{display:none}
-.card{position:relative;display:flex;flex-direction:column;align-items:center;min-width:0;gap:4px;padding:10px 9px 12px;border:2px solid white;border-radius:22px;background:linear-gradient(145deg,#fff9f5,#fce9e6);box-shadow:0 5px 15px #79364b1a;text-align:center;transition:transform .25s,box-shadow .25s}.card::before{content:'';position:absolute;inset:5px;border:1px solid #c99b5b40;border-radius:17px;pointer-events:none}.card:hover{transform:translateY(-3px);box-shadow:0 10px 25px #79364b26}
-.photo{display:flex;align-items:center;justify-content:center;width:100%;height:clamp(145px,11.5vw,210px);overflow:hidden}.photo img{display:block;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}.bottle{font-size:65px}.card h3{font-family:Heebo,Arial,sans-serif;font-size:16px;font-weight:600;line-height:1.35;color:#673444;margin:4px 0;min-height:36px;flex:1}.old-price{font-size:19px;font-weight:600;color:#76535a;line-height:1.3}.crossed-price{position:relative;display:inline-block;direction:ltr}.crossed-price::after{content:'';position:absolute;left:50%;top:50%;width:110%;height:2px;background:#d6223b;transform:translate(-50%,-50%) rotate(-25deg)}.price{font-family:Heebo,Arial,sans-serif;font-size:27px;font-weight:700;line-height:1.2;color:white;background:linear-gradient(135deg,#ad4564,#781b38);border:1px solid #cba77b;border-radius:30px;padding:4px 23px;margin:2px auto 4px;box-shadow:0 3px 8px #79364b26}
-button{font-family:Assistant,Arial,sans-serif;font-size:17px;font-weight:700;color:white;background:linear-gradient(135deg,#b75a76,#79243e);border:1px solid #b66b80;border-radius:12px;padding:10px 17px;cursor:pointer;box-shadow:0 3px 8px #79364b26}button:hover{background:linear-gradient(135deg,#9f3e5c,#64152e)}.card button{width:96%;min-height:34px;padding:7px 5px;margin-top:auto;font-size:14px;border-radius:30px}
-#moreProductsSection {
-  max-width: 1250px;
-  margin: 35px auto;
-  padding: 25px;
-  border-radius: 24px;
-  background: linear-gradient(140deg,#fffaf7,#fcebed);
-  border: 1px solid var(--gold-light);
-  box-shadow: var(--shadow);
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 4px 150px 6px;
 }
 
-#moreProductsSection h2 {
-  text-align: center;
-  font-family: 'Heebo',Arial,sans-serif;
-  font-size: 29px;
-  color: var(--wine);
+.hero h1 {
+    font-family: Assistant,Arial,sans-serif;
+    font-size: clamp(28px,2.5vw,40px);
+    line-height: 1.2;
+    color: #79243e;
+    margin: 5px 0 8px;
+    font-weight: 700;
 }
 
-/* =====================================
-   SHOPPING CART
-===================================== */
-
-.cart {
-  position: relative;
-  max-width: 1350px;
-  width: calc(100% - 40px);
-  margin: 45px auto 35px;
-  padding: 32px;
-  background: linear-gradient(145deg,#fffefd,#fff5f2);
-  border: 1px solid #e6c2c5;
-  border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(132,43,69,.09),
-              inset 0 0 0 3px rgba(255,255,255,.7);
+.hero p {
+    font-size: 18px;
+    color: #865363;
+    line-height: 1.5;
+    margin: 0;
 }
 
-.cart h2 {
-  font-family: 'Heebo',Arial,sans-serif;
-  font-size: 27px;
-  font-weight: 600;
-  color: var(--wine);
-  border-bottom: 1px solid #ead4ce;
-  padding-bottom: 12px;
-  margin-top: 8px;
+.hero p::first-line {
+    font-family: 'Cormorant Garamond',Georgia,serif;
+    font-size: 27px;
+    letter-spacing: 1.5px;
+    color: var(--wine);
 }
 
-.cart h3 {
-  color: var(--wine);
-  font-size: 23px;
-  font-weight: 700;
+/* SALE BADGE */
+
+.sale-badge {
+    position: absolute;
+    left: 6%;
+    top: -55px;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #fffaf2;
+    background: radial-gradient(
+        circle at 25% 20%,
+        #bd6680,
+        #9c3656 48%,
+        #702039 95%
+    );
+    border: 2px solid #e2c69b;
+    outline: 1px solid #c9a16b;
+    outline-offset: 4px;
+    box-shadow: 0 8px 25px #79364b26;
+    animation: pulse 2.8s ease-in-out infinite;
 }
 
-#cartItems {
-  color: #79525c;
-  font-size: 17px;
-  line-height: 1.8;
+.sale-badge strong {
+    font-family: Heebo,Arial,sans-serif;
+    font-size: 34px;
+    line-height: 1.15;
+    font-weight: 700;
 }
 
-.item {
-  padding: 13px 4px;
-  border-bottom: 1px solid #f0dfe0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
+.sale-badge span {
+    font-size: 16px;
 }
 
-/* =====================================
-   ORDER FORM
-===================================== */
-
-#orderForm {
-  display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: 12px;
-  margin-top: 20px;
+@keyframes pulse {
+    0%,100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.09);
+    }
 }
 
-#orderForm input,
-#orderForm textarea {
-  width: 100%;
-  padding: 14px 16px;
-  margin: 0;
-  border: 1px solid #e6c6cb;
-  border-radius: 12px;
-  background: #fffdfb;
-  color: #603b45;
-  font-family: 'Assistant',Arial,sans-serif;
-  font-size: 16px;
-  transition: border .2s ease,box-shadow .2s ease;
+/* SHOP LAYOUT */
+
+.shop-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0,21%)
+        minmax(0,1fr)
+        minmax(0,18%);
+    grid-template-rows: auto auto;
+    gap: 8px 18px;
+    width: 100%;
+    max-width: 1900px;
+    margin: 0 auto 32px;
+    padding: 0 18px;
+    align-items: start;
+    direction: rtl;
 }
 
-#orderForm textarea {
-  grid-column: 1 / -1;
-  resize: vertical;
+.shop-products {
+    display: contents;
 }
 
-#orderForm input:focus,
-#orderForm textarea:focus {
-  outline: none;
-  border-color: #c27b8d;
-  box-shadow: 0 0 0 3px rgba(194,123,141,.13);
+.shop-products h2 {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    font-family: Heebo,Arial,sans-serif;
+    font-size: 29px;
+    font-weight: 600;
+    color: #842b45;
+    margin: 4px 0;
+    text-align: center;
 }
 
-#orderForm button {
-  grid-column: 1 / -1;
-  justify-self: center;
-  min-width: 260px;
-  padding: 14px 25px;
-  font-size: 18px;
-  background: linear-gradient(135deg,#b84f6b,#76243e);
+.shop-products h2::before,
+.shop-products h2::after {
+    content: '';
+    height: 1px;
+    width: 75px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #c99b5b,
+        transparent
+    );
 }
 
-input,
-textarea {
-  font-family: 'Assistant',Arial,sans-serif;
+.shop-products .note {
+    display: none;
 }
 
-.note {
-  font-size: 14px;
-  color: #92747a;
-  line-height: 1.8;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8,minmax(0,1fr));
+    gap: 14px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-/* =====================================
-   FOOTER
-===================================== */
-
-footer {
-  position: relative;
-  background: linear-gradient(110deg,#76243e,#b34f6a,#8b304b);
-  color: white;
-  padding: 23px 20px;
-  margin-top: 45px;
-  border-top: 2px solid var(--gold-light);
-  box-shadow: 0 -5px 20px rgba(132,43,69,.08);
+.grid > .card {
+    grid-column: span 2;
 }
 
-.footer-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 18px;
+.grid > .card:nth-child(5) {
+    grid-column: 2 / span 2;
 }
 
-.footer-row span,
-.footer-row a {
-  color: white;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  text-decoration: none;
-  white-space: nowrap;
-  font-family: 'Assistant',Arial,sans-serif;
-  font-size: 16px;
+#products {
+    grid-column: 2;
+    grid-row: 2;
+    align-items: stretch;
+    grid-auto-rows: 1fr;
 }
 
-.footer-row a:hover {
-  color: #ffe5bf;
+/* ORDER GUIDE */
+
+.order-guide-image {
+    grid-column: 1;
+    grid-row: 2;
+    position: relative;
+    align-self: stretch;
+    min-height: 0;
+    min-width: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    background: transparent;
 }
 
-.footer-brand {
-  font-family: 'Cormorant Garamond',Georgia,serif !important;
-  font-size: 27px !important;
-  font-weight: 600;
-  letter-spacing: 1.5px;
+.order-guide-image img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+    border-radius: 24px;
 }
 
-.footer-divider {
-  width: 1px;
-  height: 25px;
-  background: rgba(255,255,255,.55);
+/* LARGE DECORATIVE BOTTLE */
+
+.beauty-hero-bottle {
+    grid-column: 3;
+    grid-row: 2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+    min-width: 0;
+    pointer-events: none;
 }
 
+.beauty-hero-bottle img {
+    display: block;
+    width: 125%;
+    max-width: min(25vw,125%);
+    height: auto;
+    object-fit: contain;
+    transform: translate(12px,-12px);
+}
 
-#floatingCart{position:fixed;bottom:25px;right:25px;z-index:999;display:flex;align-items:center;gap:10px;border:1px solid #d4af7b;border-radius:40px;padding:12px 18px;background:linear-gradient(135deg,#ad4564,#781b38)}#floatingCartCount{background:#fff7ed;color:#781b38;border-radius:50%;min-width:26px;height:26px;display:grid;place-items:center}
-@media(max-width:1200px) and (min-width:851px){.shop-layout{grid-template-columns:21% minmax(0,1fr) 16%;gap:10px;padding:0 10px}.grid{gap:8px}.card{padding:8px 5px}.card h3{font-size:14px}.price{font-size:23px;padding:4px 15px}.beauty-hero-bottle img{width:115%;transform:translateY(-20px)}}
-@media(max-width:850px){body{background-size:200px auto,auto,auto,auto;background-position:right -75px top -40px,center,center,center}.logo{font-size:43px;letter-spacing:2px}.hero{padding:15px 12px}.hero::after{position:relative;top:auto;left:auto;margin:15px auto 0;width:105px;height:105px;font-size:17px}.shop-layout{display:flex;flex-direction:column;align-items:center;width:100%;padding:0 12px;gap:18px}.shop-products{display:block;order:1;width:100%}.shop-products h2{font-size:26px;margin:0 0 15px}.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.grid>.card,.grid>.card:nth-child(5){grid-column:span 2}.photo{height:165px}.card h3{font-size:14px}.price{font-size:23px}.order-guide-image{order:2;align-self:center;width:min(100%,360px)}.order-guide-image img{position:static;width:100%;height:auto}.beauty-hero-bottle{order:3;width:100%}.beauty-hero-bottle img{width:220px;max-width:75%;transform:none}.cart{width:calc(100% - 24px);padding:20px 14px;margin:25px auto}#orderForm{grid-template-columns:1fr}#orderForm button{min-width:0;width:100%}.footer-row{flex-direction:column;gap:12px}.footer-divider{display:none}#floatingCart{bottom:15px;right:15px;padding:10px 14px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero::after{animation:none}.card{transition:none}}
-/* ===== BLUSH BEAUTY - FINAL LUXURY TOUCH ===== */
+.bottle-caption {
+    display: none;
+}
 
-/* הגדלת הבקבוקים בכרטיסי המוצרים */
+/* PRODUCT CARDS */
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    gap: 4px;
+    padding: 10px 9px 12px;
+    border: 2px solid white;
+    border-radius: 22px;
+    background: linear-gradient(
+        145deg,
+        #fff9f5,
+        #fce9e6
+    );
+    box-shadow: 0 5px 15px #79364b1a;
+    text-align: center;
+    transition: transform .25s,box-shadow .25s;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border: 1px solid #c99b5b40;
+    border-radius: 17px;
+    pointer-events: none;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px #79364b26;
+}
+
+.photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: clamp(145px,11.5vw,210px);
+    overflow: hidden;
+}
+
+.photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+#products .photo {
+    padding: 8px 0;
+}
+
 #products .photo img {
     transform: scale(1.08);
     transform-origin: center center;
 }
 
-#products .photo {
-    overflow: hidden;
-    padding: 8px 0;
+.bottle {
+    font-size: 65px;
 }
 
-/* כפתורי הוספה לסל ברורים יותר */
-#products .card button {
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    min-height: 34px;
-    border-radius: 50px !important;
+.card h3 {
+    font-family: Heebo,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #673444;
+    margin: 4px 0;
+    min-height: 36px;
+    flex: 1;
 }
 
-/* עיגול פינות מדריך ההזמנה */
-.order-guide-image {
-    border-radius: 24px !important;
-    overflow: hidden;
-    background: transparent !important;
+/* PRICES */
+
+.old-price {
+    font-size: 22px;
+    font-weight: 700;
+    color: #302729;
+    line-height: 1.3;
 }
 
-.order-guide-image img {
-    border-radius: 24px !important;
-    object-fit: contain !important;
-}
-
-/* התאמה לטלפונים ניידים */
-@media (max-width: 850px) {
-    #products .photo img {
-        transform: scale(1.08);
-    }
-
-    #products .card button {
-        font-size: 14px !important;
-    }
-}
-  .old-price {
-    color: #302729 !important;
-    font-size: 22px !important;
-    font-weight: 700 !important;
+.crossed-price {
+    position: relative;
+    display: inline-block;
+    direction: ltr;
 }
 
 .crossed-price::after {
-    background: #d6223b !important;
-    height: 2.5px !important;
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 110%;
+    height: 2.5px;
+    background: #d6223b;
+    transform: translate(-50%,-50%) rotate(-25deg);
 }
 
-/* ===== BLUSH BEAUTY | consolidated finishing styles ===== */
-.hero::after {
-  background: radial-gradient(circle at 25% 20%, #bd6680, #9c3656 48%, #702039 95%);
-  color: #fffaf2;
+.price {
+    font-family: Heebo,Arial,sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #ad4564,
+        #781b38
+    );
+    border: 1px solid #cba77b;
+    border-radius: 30px;
+    padding: 4px 23px;
+    margin: 2px auto 4px;
+    box-shadow: 0 3px 8px #79364b26;
 }
-@media (min-width: 851px) {
-  .beauty-hero-bottle { align-items: flex-start !important; align-self: stretch; }
-  .beauty-hero-bottle img { transform: translate(-10px, -12px) !important; }
-  .order-guide-image { align-self: stretch; overflow: visible; }
-  .order-guide-image img { width: 100%; height: 100%; object-fit: contain !important; object-position: center top; }
+
+/* BUTTONS */
+
+button {
+    font-family: Assistant,Arial,sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #b75a76,
+        #79243e
+    );
+    border: 1px solid #b66b80;
+    border-radius: 12px;
+    padding: 10px 17px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px #79364b26;
 }
+
+button:hover {
+    background: linear-gradient(
+        135deg,
+        #9f3e5c,
+        #64152e
+    );
+}
+
+.card button {
+    width: 96%;
+    min-height: 34px;
+    padding: 7px 5px;
+    margin-top: auto;
+    font-size: 14px;
+    border-radius: 30px;
+}
+
+#products .card button {
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+}
+
+/* ADDITIONAL PRODUCTS */
+
+#moreProductsSection {
+    max-width: 1250px;
+    margin: 35px auto;
+    padding: 25px;
+    border-radius: 24px;
+    background: linear-gradient(
+        140deg,
+        #fffaf7,
+        #fcebed
+    );
+    border: 1px solid var(--gold-light);
+    box-shadow: var(--shadow);
+}
+
+#moreProductsSection h2 {
+    text-align: center;
+    font-family: Heebo,Arial,sans-serif;
+    font-size: 29px;
+    color: var(--wine);
+}
+
+/* SHOPPING CART */
+
 .cart {
-  max-width: 1100px;
-  padding: clamp(22px, 3vw, 42px);
-  background: linear-gradient(145deg, #fffaf6, #f9e6e4);
-  border: 1px solid #d4ad79;
-  border-radius: 28px;
-  box-shadow: 0 14px 36px #79364b15, inset 0 0 0 4px #ffffffa8;
-  scroll-margin-top: 20px;
+    position: relative;
+    max-width: 1100px;
+    width: calc(100% - 40px);
+    margin: 45px auto 35px;
+    padding: clamp(22px,3vw,42px);
+    background: linear-gradient(
+        145deg,
+        #fffaf6,
+        #f9e6e4
+    );
+    border: 1px solid #d4ad79;
+    border-radius: 28px;
+    box-shadow:
+        0 14px 36px #79364b15,
+        inset 0 0 0 4px #ffffffa8;
+    scroll-margin-top: 20px;
 }
-.cart h2 { text-align: center; margin: 10px 0 22px; padding-bottom: 20px; }
-.cart h2::after { content: ''; display: block; width: 100px; height: 1px; margin: 12px auto 0; background: linear-gradient(90deg, transparent, #c99b5b, transparent); }
-#cartItems { background: #fffdfbbd; border: 1px solid #e9ccc2; border-radius: 17px; padding: 18px 22px; }
-#cartItems .item:last-child { border-bottom: 0; }
-#cartItems .small { min-width: 34px; padding: 5px 9px; border-radius: 50%; }
-#total { display: table; margin: 22px auto 32px; padding: 12px 30px; border: 1px solid #d4ad79; border-radius: 50px; color: #fff; background: linear-gradient(135deg,#ad4564,#781b38); box-shadow: 0 5px 14px #79364b20; }
-#orderForm { max-width: 880px; margin: 22px auto 0; gap: 16px; }
-#orderForm input, #orderForm textarea { border: 1px solid #dfb9ae; border-radius: 15px; background: #fffdfb; padding: 15px 18px; font-size: 17px; min-width: 0; }
-#orderForm input { min-height: 52px; }
-#orderForm input::placeholder, #orderForm textarea::placeholder { color: #956773; opacity: 1; }
-#orderForm input[type=email] { grid-column: 1 / -1; }
-#orderForm textarea { min-height: 110px; }
-#orderForm input:focus, #orderForm textarea:focus { border-color: #a83d5e; box-shadow: 0 0 0 3px #a83d5e19; }
-#orderForm button { width: min(100%, 540px); min-width: 0; min-height: 58px; margin-top: 10px; border-radius: 40px; border: 1px solid #d4ad79; font-size: 20px; background: linear-gradient(120deg,#a43d5d,#68152f); box-shadow: 0 9px 22px #79364b30; }
-#orderForm button:hover { background: linear-gradient(120deg,#91304e,#581127); }
-.cart > .note { text-align: center; margin: 24px auto 0; color: #79525c; }
-@media (max-width: 850px) {
-  .cart { padding: 24px 16px; }
-  #cartItems { padding: 14px; }
-  #orderForm { grid-template-columns: 1fr; gap: 12px; }
-  #orderForm button { width: 100%; font-size: 18px; }
-  footer { padding-bottom: 80px; }
+
+.cart h2 {
+    font-family: Heebo,Arial,sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: var(--wine);
+    border-bottom: 1px solid #ead4ce;
+    text-align: center;
+    margin: 10px 0 22px;
+    padding-bottom: 20px;
+}
+
+.cart h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 1px;
+    margin: 12px auto 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #c99b5b,
+        transparent
+    );
+}
+
+.cart h3 {
+    color: var(--wine);
+    font-size: 23px;
+    font-weight: 700;
+}
+
+#cartItems {
+    color: #79525c;
+    font-size: 17px;
+    line-height: 1.8;
+    background: #fffdfbbd;
+    border: 1px solid #e9ccc2;
+    border-radius: 17px;
+    padding: 18px 22px;
+}
+
+#cartItems.is-empty {
+    text-align: center;
+}
+
+.item {
+    padding: 13px 4px;
+    border-bottom: 1px solid #f0dfe0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#cartItems .item:last-child {
+    border-bottom: 0;
+}
+
+#cartItems .small {
+    min-width: 34px;
+    padding: 5px 9px;
+    border-radius: 50%;
+}
+
+#total {
+    display: table;
+    margin: 22px auto 32px;
+    padding: 12px 30px;
+    border: 1px solid #d4ad79;
+    border-radius: 50px;
+    color: #fff;
+    background: linear-gradient(
+        135deg,
+        #ad4564,
+        #781b38
+    );
+    box-shadow: 0 5px 14px #79364b20;
+}
+
+/* ORDER FORM */
+
+#orderForm {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    max-width: 880px;
+    margin: 22px auto 0;
+    gap: 16px;
+}
+
+#orderForm input,
+#orderForm textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 15px 18px;
+    margin: 0;
+    border: 1px solid #dfb9ae;
+    border-radius: 15px;
+    background: #fffdfb;
+    color: #603b45;
+    font-family: Assistant,Arial,sans-serif;
+    font-size: 17px;
+    transition: border .2s ease,box-shadow .2s ease;
+}
+
+#orderForm input {
+    min-height: 52px;
+}
+
+#orderForm input::placeholder,
+#orderForm textarea::placeholder {
+    color: #956773;
+    opacity: 1;
+}
+
+#orderForm input[type=email] {
+    grid-column: 1 / -1;
+}
+
+#orderForm textarea {
+    grid-column: 1 / -1;
+    min-height: 110px;
+    resize: vertical;
+}
+
+#orderForm input:focus,
+#orderForm textarea:focus {
+    outline: none;
+    border-color: #a83d5e;
+    box-shadow: 0 0 0 3px #a83d5e19;
+}
+
+#orderForm button {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%,540px);
+    min-width: 0;
+    min-height: 58px;
+    margin-top: 10px;
+    padding: 14px 25px;
+    border-radius: 40px;
+    border: 1px solid #d4ad79;
+    font-size: 20px;
+    background: linear-gradient(
+        120deg,
+        #a43d5d,
+        #68152f
+    );
+    box-shadow: 0 9px 22px #79364b30;
+}
+
+#orderForm button:hover {
+    background: linear-gradient(
+        120deg,
+        #91304e,
+        #581127
+    );
+}
+
+input,
+textarea {
+    font-family: Assistant,Arial,sans-serif;
+}
+
+.note {
+    font-size: 14px;
+    color: #92747a;
+    line-height: 1.8;
+}
+
+.cart > .note {
+    text-align: center;
+    margin: 24px auto 0;
+    color: #79525c;
+}
+
+/* FOOTER */
+
+footer {
+    position: relative;
+    background: linear-gradient(
+        110deg,
+        #76243e,
+        #b34f6a,
+        #8b304b
+    );
+    color: white;
+    padding: 23px 20px;
+    margin-top: 45px;
+    border-top: 2px solid var(--gold-light);
+    box-shadow: 0 -5px 20px rgba(132,43,69,.08);
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.footer-row span,
+.footer-row a {
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: Assistant,Arial,sans-serif;
+    font-size: 16px;
+}
+
+.footer-row a:hover {
+    color: #ffe5bf;
+}
+
+.footer-brand {
+    font-family: 'Cormorant Garamond',Georgia,serif !important;
+    font-size: 27px !important;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.footer-divider {
+    width: 1px;
+    height: 25px;
+    background: rgba(255,255,255,.55);
+}
+
+/* FLOATING CART */
+
+#floatingCart {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #d4af7b;
+    border-radius: 40px;
+    padding: 12px 18px;
+    background: linear-gradient(
+        135deg,
+        #ad4564,
+        #781b38
+    );
+}
+
+#floatingCartCount {
+    background: #fff7ed;
+    color: #781b38;
+    border-radius: 50%;
+    min-width: 26px;
+    height: 26px;
+    display: grid;
+    place-items: center;
+}
+
+/* TABLET */
+
+@media (max-width:1200px) and (min-width:851px) {
+
+    .shop-layout {
+        grid-template-columns: 21% minmax(0,1fr) 16%;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .grid {
+        gap: 8px;
+    }
+
+    .card {
+        padding: 8px 5px;
+    }
+
+    .card h3 {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 23px;
+        padding: 4px 15px;
+    }
+
+    .beauty-hero-bottle img {
+        width: 115%;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width:850px) {
+
+    body {
+        background-size: 200px auto,auto,auto,auto;
+        background-position:
+            right -75px top -40px,
+            center,
+            center,
+            center;
+    }
+
+    .logo {
+        font-size: 43px;
+        letter-spacing: 2px;
+    }
+
+    .hero {
+        padding: 15px 12px;
+    }
+
+    .sale-badge {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 12px auto 0;
+        width: 105px;
+        height: 105px;
+    }
+
+    .sale-badge strong {
+        font-size: 29px;
+    }
+
+    .sale-badge span {
+        font-size: 14px;
+    }
+
+    .shop-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 12px;
+        gap: 18px;
+    }
+
+    .shop-products {
+        display: block;
+        order: 1;
+        width: 100%;
+    }
+
+    .shop-products h2 {
+        font-size: 26px;
+        margin: 0 0 15px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4,minmax(0,1fr));
+        gap: 10px;
+    }
+
+    .grid > .card,
+    .grid > .card:nth-child(5) {
+        grid-column: span 2;
+    }
+
+    .photo {
+        height: 165px;
+    }
+
+    .card h3 {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 23px;
+    }
+
+    #products .card button {
+        font-size: 14px;
+    }
+
+    .order-guide-image {
+        order: 2;
+        align-self: center;
+        width: min(100%,360px);
+    }
+
+    .order-guide-image img {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .beauty-hero-bottle {
+        order: 3;
+        width: 100%;
+    }
+
+    .beauty-hero-bottle img {
+        width: 220px;
+        max-width: 75%;
+        transform: none;
+    }
+
+    .cart {
+        width: calc(100% - 24px);
+        padding: 24px 16px;
+        margin: 25px auto;
+    }
+
+    #cartItems {
+        padding: 14px;
+    }
+
+    #orderForm {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    #orderForm button {
+        min-width: 0;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .footer-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+
+    footer {
+        padding-bottom: 80px;
+    }
+
+    #floatingCart {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 14px;
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .sale-badge {
+        animation: none;
+    }
+
+    .card {
+        transition: none;
+    }
 }
 
 </style>
 </head>
+
 <body>
+
 <header>
-<div class="logo">BLUSH BEAUTY</div>
-<div>איפור וטיפוח במחירים שכיף לגלות</div>
+    <div class="logo">BLUSH BEAUTY</div>
+    <div>איפור וטיפוח במחירים שכיף לגלות</div>
 </header>
+
 <div class="hero">
-<h1>מראה מושלם במחיר מדהים!</h1>
-<p>REVLON COLORSTAY<br>
-הגוונים המבוקשים • איסוף ממרכז בני ברק<br>
-</p>
+
+    <div class="sale-badge">
+        <span>מחיר מיוחד</span>
+        <strong>39 ₪</strong>
+        <span>לזמן מוגבל!</span>
+    </div>
+
+    <h1>מראה מושלם במחיר מדהים!</h1>
+
+    <p>
+        REVLON COLORSTAY<br>
+        הגוונים המבוקשים • איסוף ממרכז בני ברק
+    </p>
 
 </div>
+
 <main>
 
-<div class="shop-layout">
+    <div class="shop-layout">
 
-  
-<aside class="order-guide-image" dir="rtl">
-<img src="order-guide-long.png" alt="איך מזמינים? מדריך בארבעה צעדים"></aside>
+        <aside class="order-guide-image" dir="rtl">
+            <img
+                src="order-guide-long.png"
+                alt="איך מזמינים? מדריך בארבעה צעדים"
+            >
+        </aside>
 
+        <div class="shop-products">
 
- <div class="shop-products">
-    <h2>בחרי את הגוון שלך</h2>
-    <p class="note">הגוון והמחיר מופיעים ליד כל מוצר. התמונות והנתונים כרגע להמחשה בלבד.</p>
-    <div class="grid" id="products"></div>
-</div>
+            <h2>בחרי את הגוון שלך</h2>
 
-<!-- בקבוק מייקאפ גדול וקישוטי משיחות מייקאפ -->
-<div class="beauty-hero-bottle">
-<img src="hero-bottle-wrap.png" alt="REVLON COLORSTAY"> 
-   <div class="bottle-caption">REVLON<br>COLORSTAY</div>
-</div>
+            <p class="note">
+                הגוון והמחיר מופיעים ליד כל מוצר.
+                התמונות והנתונים כרגע להמחשה בלבד.
+            </p>
 
-</div>
+            <div class="grid" id="products"></div>
 
-  <section id="moreProductsSection" style="display:none;">
-  <h2>מוצרים נוספים</h2>
-  <div class="grid" id="moreProducts"></div>
-</section>
-<section class="cart">
-<h2>🛍 סל הקניות שלי</h2>
-<div id="cartItems">הסל ריק</div>
-<h3 id="total">סה״כ: 0 ₪</h3>
-<h2>פרטי הזמנה</h2>
-<form id="orderForm">
-<input id="customer" aria-label="שם מלא" placeholder="שם מלא" required>
-<input id="phone" aria-label="מספר טלפון" type="tel" placeholder="מספר טלפון" required>
-<input id="email" aria-label="כתובת מייל (לא חובה)" type="email" placeholder="כתובת מייל (לא חובה)">
-<textarea id="notes" aria-label="הערות להזמנה" rows="3" placeholder="הערות להזמנה"></textarea>
-<button type="submit">הזמנה לשליחה במייל</button>
-</form>
-<p class="note">
-אין תשלום באתר. לחיצה על הכפתור תפתח הודעת מייל
-עם פרטי ההזמנה. יש לשלוח אותה כדי להעביר את הבקשה.
-</p>
-</section>
+        </div>
+
+        <div class="beauty-hero-bottle">
+
+            <img
+                src="hero-bottle-wrap.png"
+                alt="REVLON COLORSTAY"
+            >
+
+            <div class="bottle-caption">
+                REVLON<br>COLORSTAY
+            </div>
+
+        </div>
+
+    </div>
+
+    <section id="moreProductsSection" style="display:none;">
+
+        <h2>מוצרים נוספים</h2>
+
+        <div class="grid" id="moreProducts"></div>
+
+    </section>
+
+    <section class="cart">
+
+        <h2>🛍 סל הקניות שלי</h2>
+
+        <div id="cartItems" class="is-empty">
+            הסל ריק
+        </div>
+
+        <h3 id="total">סה״כ: 0 ₪</h3>
+
+        <h2>פרטי הזמנה</h2>
+
+        <form id="orderForm">
+
+            <input
+                id="customer"
+                aria-label="שם מלא"
+                placeholder="שם מלא"
+                required
+            >
+
+            <input
+                id="phone"
+                aria-label="מספר טלפון"
+                type="tel"
+                placeholder="מספר טלפון"
+                required
+            >
+
+            <input
+                id="email"
+                aria-label="כתובת מייל (לא חובה)"
+                type="email"
+                placeholder="כתובת מייל (לא חובה)"
+            >
+
+            <textarea
+                id="notes"
+                aria-label="הערות להזמנה"
+                rows="3"
+                placeholder="הערות להזמנה"
+            ></textarea>
+
+            <button type="submit">
+                הזמנה לשליחה במייל
+            </button>
+
+        </form>
+
+        <p class="note">
+            אין תשלום באתר. לחיצה על הכפתור תפתח הודעת מייל
+            עם פרטי ההזמנה. יש לשלוח אותה כדי להעביר את הבקשה.
+        </p>
+
+    </section>
+
 </main>
 
 <footer dir="rtl">
-  <div class="footer-row">
-    <span class="footer-brand">BLUSH BEAUTY</span>
-    <span class="footer-divider"></span>
 
-    <a href="tel:0533190439">
-      &#9742; להזמנות: 053-3190439
-    </a>
-    <span class="footer-divider"></span>
+    <div class="footer-row">
 
-   <a href="mailto:rw46011@gmail.com">
-    &#9993; rw46011@gmail.com
-    </a>
-  <span class="footer-divider"></span>
+        <span class="footer-brand">
+            BLUSH BEAUTY
+        </span>
 
-  <span>
- &#128205; איסוף ממרכז בני ברק בתיאום מראש
- </span>
-  </div>
+        <span class="footer-divider"></span>
+
+        <a href="tel:0533190439">
+            &#9742; להזמנות: 053-3190439
+        </a>
+
+        <span class="footer-divider"></span>
+
+        <a href="mailto:rw46011@gmail.com">
+            &#9993; rw46011@gmail.com
+        </a>
+
+        <span class="footer-divider"></span>
+
+        <span>
+            &#128205; איסוף ממרכז בני ברק בתיאום מראש
+        </span>
+
+    </div>
+
 </footer>
 
 <script>
-const products=[
-{id:7,shade:"110",price:39},
-{id:1,shade:"150",price:39},
-{id:2,shade:"180",price:39},
-{id:3,shade:"200",price:39},
-{id:4,shade:"220",price:39},
-{id:5,shade:"240",price:39},
-{id:6,shade:"250",price:39}
+
+const products = [
+    {id:7,shade:"110",price:39},
+    {id:1,shade:"150",price:39},
+    {id:2,shade:"180",price:39},
+    {id:3,shade:"200",price:39},
+    {id:4,shade:"220",price:39},
+    {id:5,shade:"240",price:39},
+    {id:6,shade:"250",price:39}
 ];
+
 const additionalProducts = [];
-const cart={};
-const money=n=>n.toLocaleString("he-IL")+" ₪";
-function renderProducts(){
-document.getElementById("products").innerHTML=products.map(p=>`
-<div class="card"><div class="photo"><img src="${p.shade}.jpg" alt="מייקאפ REVLON גוון ${p.shade}"></div>
-<h3>מייקאפ REVLON – גוון ${p.shade}</h3>
 
+const cart = {};
 
+const money = n => n.toLocaleString("he-IL") + " ₪";
 
-<div class="old-price"><span class="crossed-price">45</span> ₪</div>
-<div class="price">${money(p.price)}</div>
+function renderProducts() {
 
-<button onclick="add(${p.id})">הוספה לסל +</button>
-</div>`).join("");
+    document.getElementById("products").innerHTML =
+        products.map(p => `
+
+        <div class="card">
+
+            <div class="photo">
+                <img
+                    src="${p.shade}.jpg"
+                    alt="מייקאפ REVLON גוון ${p.shade}"
+                >
+            </div>
+
+            <h3>
+                מייקאפ REVLON – גוון ${p.shade}
+            </h3>
+
+            <div class="old-price">
+                <span class="crossed-price">45</span> ₪
+            </div>
+
+            <div class="price">
+                ${money(p.price)}
+            </div>
+
+            <button onclick="add(${p.id})">
+                הוספה לסל +
+            </button>
+
+        </div>
+
+    `).join("");
+
 }
+
 function renderAdditionalProducts() {
-  const activeProducts = additionalProducts.filter(p => p.active !== false);
-  const section = document.getElementById("moreProductsSection");
-  const container = document.getElementById("moreProducts");
 
-  section.style.display = activeProducts.length > 0 ? "block" : "none";
+    const activeProducts =
+        additionalProducts.filter(p => p.active !== false);
 
-  container.innerHTML = activeProducts.map(p => `
-    <div class="card">
-      <div class="photo">
-        ${p.image ? `<img src="${p.image}" alt="${p.name}">` : `<span class="bottle">💄</span>`}
-      </div>
-      <h3>${p.name}</h3>
-      <div class="price">${money(p.price)}</div>
-      <button onclick="add(${p.id})">הוספה לסל +</button>
-    </div>
-  `).join("");
+    const section =
+        document.getElementById("moreProductsSection");
+
+    const container =
+        document.getElementById("moreProducts");
+
+    section.style.display =
+        activeProducts.length > 0 ? "block" : "none";
+
+    container.innerHTML = activeProducts.map(p => `
+
+        <div class="card">
+
+            <div class="photo">
+
+                ${p.image
+                    ? `<img src="${p.image}" alt="${p.name}">`
+                    : `<span class="bottle">💄</span>`
+                }
+
+            </div>
+
+            <h3>${p.name}</h3>
+
+            <div class="price">
+                ${money(p.price)}
+            </div>
+
+            <button onclick="add(${p.id})">
+                הוספה לסל +
+            </button>
+
+        </div>
+
+    `).join("");
+
 }
-function add(id){
-cart[id]=(cart[id]||0)+1;
-renderCart();
+
+function add(id) {
+
+    cart[id] = (cart[id] || 0) + 1;
+
+    renderCart();
+
 }
-function change(id,delta){
-cart[id]=(cart[id]||0)+delta;
-if(cart[id]<=0)delete cart[id];
-renderCart();
+
+function change(id,delta) {
+
+    cart[id] = (cart[id] || 0) + delta;
+
+    if(cart[id] <= 0) {
+
+        delete cart[id];
+
+    }
+
+    renderCart();
+
 }
-function renderCart(){
-let total=0;
-let html="";
-[...products, ...additionalProducts].forEach(p=>{const q=cart[p.id]||0;
-if(!q)return;
-total+=p.price*q;
-html+=`<div class="item">
-<span>${p.name || "מייקאפ REVLON – גוון " + p.shade}<br>
-${money(p.price*q)}</span>
-<span>
-<button class="small" onclick="change(${p.id},-1)">−</button>
-${q}
-<button class="small" onclick="change(${p.id},1)">+</button>
-</span></div>`;
-});
-document.getElementById("cartItems").innerHTML=html||"הסל ריק";
-document.getElementById("total").textContent="סה״כ: "+money(total);
+
+function renderCart() {
+
+    let total = 0;
+    let html = "";
+
+    [...products,...additionalProducts].forEach(p => {
+
+        const q = cart[p.id] || 0;
+
+        if(!q) return;
+
+        total += p.price * q;
+
+        html += `
+
+            <div class="item">
+
+                <span>
+
+                    ${p.name || "מייקאפ REVLON – גוון " + p.shade}
+
+                    <br>
+
+                    ${money(p.price * q)}
+
+                </span>
+
+                <span>
+
+                    <button
+                        class="small"
+                        onclick="change(${p.id},-1)"
+                    >−</button>
+
+                    ${q}
+
+                    <button
+                        class="small"
+                        onclick="change(${p.id},1)"
+                    >+</button>
+
+                </span>
+
+            </div>
+
+        `;
+
+    });
+
+    const cartItems =
+        document.getElementById("cartItems");
+
+    cartItems.innerHTML = html || "הסל ריק";
+
+    cartItems.classList.toggle("is-empty",!html);
+
+    document.getElementById("total").textContent =
+        "סה״כ: " + money(total);
+
 }
-document.getElementById("orderForm").onsubmit=function(e){
-e.preventDefault();
-const selected=[...products, ...additionalProducts].filter(p=>cart[p.id]);
-if(!selected.length){alert("יש להוסיף מוצר לסל");return;}
-const name=document.getElementById("customer").value;
-const phone=document.getElementById("phone").value;
-const email=document.getElementById("email").value;
-const notes=document.getElementById("notes").value;
-const lines=selected.map(p=>
-(p.name || "מייקאפ REVLON – גוון "+p.shade)+
-" | כמות "+cart[p.id]+
-" | "+money(p.price*cart[p.id]));
-const total=selected.reduce((s,p)=>s+p.price*cart[p.id],0);
-const body=[
-"הזמנה חדשה מאתר BLUSH BEAUTY",
-"שם: "+name,
-"טלפון: "+phone,
-"מייל: "+email,
-"",
-...lines,
-"",
-"סה״כ: "+money(total),
-"הערות: "+notes
-].join("\n");
-const url="mailto:rw46011@gmail.com?subject="+
-encodeURIComponent("הזמנה מאתר BLUSH BEAUTY")+
-"&body="+encodeURIComponent(body);
-window.location.href=url;
-alert("נפתחה אפשרות לשליחת ההזמנה במייל. יש לאשר את השליחה בתוכנת המייל.");
+
+document.getElementById("orderForm").onsubmit = function(e) {
+
+    e.preventDefault();
+
+    const selected =
+        [...products,...additionalProducts].filter(p => cart[p.id]);
+
+    if(!selected.length) {
+
+        alert("יש להוסיף מוצר לסל");
+
+        return;
+
+    }
+
+    const name =
+        document.getElementById("customer").value;
+
+    const phone =
+        document.getElementById("phone").value;
+
+    const email =
+        document.getElementById("email").value;
+
+    const notes =
+        document.getElementById("notes").value;
+
+    const lines = selected.map(p =>
+
+        (p.name || "מייקאפ REVLON – גוון " + p.shade) +
+
+        " | כמות " + cart[p.id] +
+
+        " | " + money(p.price * cart[p.id])
+
+    );
+
+    const total = selected.reduce(
+        (s,p) => s + p.price * cart[p.id],0
+    );
+
+    const body = [
+
+        "הזמנה חדשה מאתר BLUSH BEAUTY",
+
+        "שם: " + name,
+
+        "טלפון: " + phone,
+
+        "מייל: " + email,
+
+        "",
+
+        ...lines,
+
+        "",
+
+        "סה״כ: " + money(total),
+
+        "הערות: " + notes
+
+    ].join("\n");
+
+    const url =
+
+        "mailto:rw46011@gmail.com?subject=" +
+
+        encodeURIComponent("הזמנה מאתר BLUSH BEAUTY") +
+
+        "&body=" +
+
+        encodeURIComponent(body);
+
+    window.location.href = url;
+
+    alert(
+        "נפתחה אפשרות לשליחת ההזמנה במייל. יש לאשר את השליחה בתוכנת המייל."
+    );
+
 };
+
 renderProducts();
+
 renderAdditionalProducts();
+
 renderCart();
+
 </script>
-   
-<button id="floatingCart" type="button"
-onclick="document.querySelector('section.cart').scrollIntoView({behavior:'smooth'})">
+
+<button
+    id="floatingCart"
+    type="button"
+    onclick="document.querySelector('section.cart').scrollIntoView({behavior:'smooth'})"
+>
+
     🛒 הסל שלי
+
     <span id="floatingCartCount">0</span>
+
 </button>
 
 <script>
-function updateFloatingCart() {
-    const counter = document.getElementById("floatingCartCount");
 
-    if (counter && typeof cart !== "undefined") {
-        counter.textContent = Object.values(cart)
-            .reduce((sum, q) => sum + (Number(q) || 0), 0);
+function updateFloatingCart() {
+
+    const counter =
+        document.getElementById("floatingCartCount");
+
+    if(counter && typeof cart !== "undefined") {
+
+        counter.textContent = Object.values(cart).reduce(
+            (sum,q) => sum + (Number(q) || 0),0
+        );
+
     }
+
 }
 
-const cartList = document.getElementById("cartItems");
+const cartList =
+    document.getElementById("cartItems");
 
-if (cartList) {
+if(cartList) {
+
     new MutationObserver(updateFloatingCart).observe(
+
         cartList,
+
         {
             childList: true,
             subtree: true,
             characterData: true
         }
+
     );
+
 }
 
 updateFloatingCart();
+
 </script>
 
 </body>
