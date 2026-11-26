@@ -218,12 +218,13 @@ footer {
 
 /* הגדלת הבקבוקים בכרטיסי המוצרים */
 #products .photo img {
-    transform: scale(1.15);
+    transform: scale(1.08);
     transform-origin: center center;
 }
 
 #products .photo {
-    overflow: visible;
+    overflow: hidden;
+    padding: 8px 0;
 }
 
 /* כפתורי הוספה לסל ברורים יותר */
@@ -250,6 +251,7 @@ footer {
 @media (min-width: 851px) {
     .beauty-hero-bottle {
         align-items: center !important;
+        align-self: stretch;
     }
 
     .beauty-hero-bottle img {
