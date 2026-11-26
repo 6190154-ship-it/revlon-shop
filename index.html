@@ -247,18 +247,6 @@ footer {
     object-fit: contain !important;
 }
 
-/* מיקום מאוזן של הבקבוק הגדול */
-@media (min-width: 851px) {
-    .beauty-hero-bottle {
-        align-items: center !important;
-        align-self: stretch;
-    }
-
-    .beauty-hero-bottle img {
-        transform: translate(-10px, 0) !important;
-    }
-}
-
 /* התאמה לטלפונים ניידים */
 @media (max-width: 850px) {
     #products .photo img {
@@ -279,6 +267,51 @@ footer {
     background: #d6223b !important;
     height: 2.5px !important;
 }
+
+/* ===== BLUSH BEAUTY | consolidated finishing styles ===== */
+.hero::after {
+  background: radial-gradient(circle at 25% 20%, #bd6680, #9c3656 48%, #702039 95%);
+  color: #fffaf2;
+}
+@media (min-width: 851px) {
+  .beauty-hero-bottle { align-items: flex-start !important; align-self: stretch; }
+  .beauty-hero-bottle img { transform: translate(-10px, -12px) !important; }
+  .order-guide-image { align-self: stretch; overflow: visible; }
+  .order-guide-image img { width: 100%; height: 100%; object-fit: contain !important; object-position: center top; }
+}
+.cart {
+  max-width: 1100px;
+  padding: clamp(22px, 3vw, 42px);
+  background: linear-gradient(145deg, #fffaf6, #f9e6e4);
+  border: 1px solid #d4ad79;
+  border-radius: 28px;
+  box-shadow: 0 14px 36px #79364b15, inset 0 0 0 4px #ffffffa8;
+  scroll-margin-top: 20px;
+}
+.cart h2 { text-align: center; margin: 10px 0 22px; padding-bottom: 20px; }
+.cart h2::after { content: ''; display: block; width: 100px; height: 1px; margin: 12px auto 0; background: linear-gradient(90deg, transparent, #c99b5b, transparent); }
+#cartItems { background: #fffdfbbd; border: 1px solid #e9ccc2; border-radius: 17px; padding: 18px 22px; }
+#cartItems .item:last-child { border-bottom: 0; }
+#cartItems .small { min-width: 34px; padding: 5px 9px; border-radius: 50%; }
+#total { display: table; margin: 22px auto 32px; padding: 12px 30px; border: 1px solid #d4ad79; border-radius: 50px; color: #fff; background: linear-gradient(135deg,#ad4564,#781b38); box-shadow: 0 5px 14px #79364b20; }
+#orderForm { max-width: 880px; margin: 22px auto 0; gap: 16px; }
+#orderForm input, #orderForm textarea { border: 1px solid #dfb9ae; border-radius: 15px; background: #fffdfb; padding: 15px 18px; font-size: 17px; min-width: 0; }
+#orderForm input { min-height: 52px; }
+#orderForm input::placeholder, #orderForm textarea::placeholder { color: #956773; opacity: 1; }
+#orderForm input[type=email] { grid-column: 1 / -1; }
+#orderForm textarea { min-height: 110px; }
+#orderForm input:focus, #orderForm textarea:focus { border-color: #a83d5e; box-shadow: 0 0 0 3px #a83d5e19; }
+#orderForm button { width: min(100%, 540px); min-width: 0; min-height: 58px; margin-top: 10px; border-radius: 40px; border: 1px solid #d4ad79; font-size: 20px; background: linear-gradient(120deg,#a43d5d,#68152f); box-shadow: 0 9px 22px #79364b30; }
+#orderForm button:hover { background: linear-gradient(120deg,#91304e,#581127); }
+.cart > .note { text-align: center; margin: 24px auto 0; color: #79525c; }
+@media (max-width: 850px) {
+  .cart { padding: 24px 16px; }
+  #cartItems { padding: 14px; }
+  #orderForm { grid-template-columns: 1fr; gap: 12px; }
+  #orderForm button { width: 100%; font-size: 18px; }
+  footer { padding-bottom: 80px; }
+}
+
 </style>
 </head>
 <body>
@@ -326,10 +359,10 @@ footer {
 <h3 id="total">סה״כ: 0 ₪</h3>
 <h2>פרטי הזמנה</h2>
 <form id="orderForm">
-<input id="customer" placeholder="שם מלא" required>
-<input id="phone" type="tel" placeholder="מספר טלפון" required>
-<input id="email" type="email" placeholder="כתובת מייל (לא חובה)">
-<textarea id="notes" rows="3" placeholder="הערות להזמנה"></textarea>
+<input id="customer" aria-label="שם מלא" placeholder="שם מלא" required>
+<input id="phone" aria-label="מספר טלפון" type="tel" placeholder="מספר טלפון" required>
+<input id="email" aria-label="כתובת מייל (לא חובה)" type="email" placeholder="כתובת מייל (לא חובה)">
+<textarea id="notes" aria-label="הערות להזמנה" rows="3" placeholder="הערות להזמנה"></textarea>
 <button type="submit">הזמנה לשליחה במייל</button>
 </form>
 <p class="note">
