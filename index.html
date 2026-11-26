@@ -7,12 +7,19 @@
 <title>BLUSH BEAUTY | איפור וטיפוח</title>
 
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Heebo:wght@400;500;600;700&display=swap');
 
+/* COLOR PALETTE */
+
 :root {
-    --wine: #842b45;
-    --wine-dark: #682037;
-    --gold: #c99b5b;
+    --cream: #fff8f3;
+    --pink: #fce8e5;
+    --powder: #f4d7dc;
+    --rose: #edc5cf;
+    --wine: #861c3d;
+    --wine-dark: #68152f;
+    --gold: #d7aa68;
     --gold-light: #ead3a8;
     --text: #663c45;
     --muted: #99747b;
@@ -33,9 +40,22 @@ body {
     color: var(--text);
     background:
         url('makeup-top-new.png') right -4vw top -7vw / 34vw auto no-repeat,
-        radial-gradient(ellipse at 5% 40%,#f3d9d5,transparent 48%),
-        radial-gradient(ellipse at 95% 10%,#edc7d0,transparent 48%),
-        linear-gradient(135deg,#f8e5e2,#fff7f3,#f2d3da);
+        radial-gradient(
+            ellipse at 5% 40%,
+            var(--powder),
+            transparent 48%
+        ),
+        radial-gradient(
+            ellipse at 95% 10%,
+            var(--rose),
+            transparent 48%
+        ),
+        linear-gradient(
+            135deg,
+            var(--pink),
+            var(--cream),
+            var(--powder)
+        );
     overflow-x: hidden;
 }
 
@@ -51,7 +71,7 @@ header {
     font-size: clamp(42px,3.8vw,65px);
     font-weight: 500;
     letter-spacing: 5px;
-    color: #79364b;
+    color: var(--wine);
     line-height: 1.05;
 }
 
@@ -85,7 +105,7 @@ header > div:not(.logo) {
     font-family: Assistant,Arial,sans-serif;
     font-size: clamp(28px,2.5vw,40px);
     line-height: 1.2;
-    color: #79243e;
+    color: var(--wine);
     margin: 5px 0 8px;
     font-weight: 700;
 }
@@ -187,7 +207,7 @@ header > div:not(.logo) {
     font-family: Heebo,Arial,sans-serif;
     font-size: 29px;
     font-weight: 600;
-    color: #842b45;
+    color: var(--wine);
     margin: 4px 0;
     text-align: center;
 }
@@ -198,7 +218,10 @@ header > div:not(.logo) {
     height: 1px;
     width: 75px;
     background: linear-gradient(
-        90deg,transparent,#c99b5b,transparent
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
     );
 }
 
@@ -294,7 +317,9 @@ header > div:not(.logo) {
     border: 2px solid white;
     border-radius: 22px;
     background: linear-gradient(
-        145deg,#fff9f5,#fce9e6
+        145deg,
+        var(--cream),
+        var(--pink)
     );
     box-shadow: 0 5px 15px #79364b1a;
     text-align: center;
@@ -305,7 +330,7 @@ header > div:not(.logo) {
     content: '';
     position: absolute;
     inset: 5px;
-    border: 1px solid #c99b5b40;
+    border: 1px solid #d7aa6840;
     border-radius: 17px;
     pointer-events: none;
 }
@@ -389,9 +414,11 @@ header > div:not(.logo) {
     line-height: 1.2;
     color: white;
     background: linear-gradient(
-        135deg,#ad4564,#781b38
+        135deg,
+        #ad4564,
+        var(--wine)
     );
-    border: 1px solid #cba77b;
+    border: 1px solid var(--gold);
     border-radius: 30px;
     padding: 4px 23px;
     margin: 2px auto 4px;
@@ -406,7 +433,9 @@ button {
     font-weight: 700;
     color: white;
     background: linear-gradient(
-        135deg,#b75a76,#79243e
+        135deg,
+        #ac4b69,
+        var(--wine)
     );
     border: 1px solid #b66b80;
     border-radius: 12px;
@@ -417,7 +446,9 @@ button {
 
 button:hover {
     background: linear-gradient(
-        135deg,#9f3e5c,#64152e
+        135deg,
+        var(--wine),
+        var(--wine-dark)
     );
 }
 
@@ -444,9 +475,11 @@ button:hover {
     padding: 25px;
     border-radius: 24px;
     background: linear-gradient(
-        140deg,#fffaf7,#fcebed
+        145deg,
+        var(--cream),
+        var(--pink)
     );
-    border: 1px solid var(--gold-light);
+    border: 1px solid var(--gold);
     box-shadow: var(--shadow);
 }
 
@@ -466,9 +499,11 @@ button:hover {
     margin: 45px auto 35px;
     padding: clamp(22px,3vw,42px);
     background: linear-gradient(
-        145deg,#fffaf6,#f9e6e4
+        145deg,
+        var(--cream),
+        var(--pink)
     );
-    border: 1px solid #d4ad79;
+    border: 1px solid var(--gold);
     border-radius: 28px;
     box-shadow:
         0 14px 36px #79364b15,
@@ -494,7 +529,10 @@ button:hover {
     height: 1px;
     margin: 12px auto 0;
     background: linear-gradient(
-        90deg,transparent,#c99b5b,transparent
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
     );
 }
 
@@ -508,8 +546,8 @@ button:hover {
     color: #79525c;
     font-size: 17px;
     line-height: 1.8;
-    background: #fffdfbbd;
-    border: 1px solid #e9ccc2;
+    background: var(--cream);
+    border: 1px solid var(--rose);
     border-radius: 17px;
     padding: 18px 22px;
 }
@@ -541,11 +579,13 @@ button:hover {
     display: table;
     margin: 22px auto 32px;
     padding: 12px 30px;
-    border: 1px solid #d4ad79;
+    border: 1px solid var(--gold);
     border-radius: 50px;
     color: #fff;
     background: linear-gradient(
-        135deg,#ad4564,#781b38
+        135deg,
+        #ad4564,
+        var(--wine)
     );
     box-shadow: 0 5px 14px #79364b20;
 }
@@ -566,9 +606,9 @@ button:hover {
     min-width: 0;
     padding: 15px 18px;
     margin: 0;
-    border: 1px solid #dfb9ae;
+    border: 1px solid var(--rose);
     border-radius: 15px;
-    background: #fffdfb;
+    background: var(--cream);
     color: #603b45;
     font-family: Assistant,Arial,sans-serif;
     font-size: 20px;
@@ -614,17 +654,21 @@ button:hover {
     margin-top: 10px;
     padding: 14px 25px;
     border-radius: 40px;
-    border: 1px solid #d4ad79;
+    border: 1px solid var(--gold);
     font-size: 20px;
     background: linear-gradient(
-        120deg,#a43d5d,#68152f
+        120deg,
+        #ac4b69,
+        var(--wine)
     );
     box-shadow: 0 9px 22px #79364b30;
 }
 
 #orderForm button:hover {
     background: linear-gradient(
-        120deg,#91304e,#581127
+        120deg,
+        var(--wine),
+        var(--wine-dark)
     );
 }
 
@@ -650,12 +694,15 @@ textarea {
 footer {
     position: relative;
     background: linear-gradient(
-        110deg,#76243e,#b34f6a,#8b304b
+        110deg,
+        var(--wine),
+        #a54160,
+        var(--wine)
     );
     color: white;
     padding: 23px 0;
     margin-top: 45px;
-    border-top: 2px solid var(--gold-light);
+    border-top: 2px solid var(--gold);
     box-shadow: 0 -5px 20px rgba(132,43,69,.08);
     overflow: hidden;
 }
@@ -740,17 +787,19 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
-    border: 1px solid #d4af7b;
+    border: 1px solid var(--gold);
     border-radius: 40px;
     padding: 12px 18px;
     background: linear-gradient(
-        135deg,#ad4564,#781b38
+        135deg,
+        #ad4564,
+        var(--wine)
     );
 }
 
 #floatingCartCount {
-    background: #fff7ed;
-    color: #781b38;
+    background: var(--cream);
+    color: var(--wine);
     border-radius: 50%;
     min-width: 26px;
     height: 26px;
@@ -788,6 +837,7 @@ footer {
     .beauty-hero-bottle img {
         width: 115%;
     }
+
 }
 
 /* MOBILE */
@@ -945,7 +995,10 @@ footer {
         right: 15px;
         padding: 10px 14px;
     }
+
 }
+
+/* REDUCED MOTION */
 
 @media (prefers-reduced-motion:reduce) {
 
@@ -975,6 +1028,7 @@ footer {
     .footer-row[aria-hidden="true"] {
         display: none;
     }
+
 }
 
 </style>
@@ -983,8 +1037,11 @@ footer {
 <body>
 
 <header>
+
     <div class="logo">BLUSH BEAUTY</div>
+
     <div>איפור וטיפוח במחירים שכיף לגלות</div>
+
 </header>
 
 <div class="hero">
@@ -1009,10 +1066,12 @@ footer {
     <div class="shop-layout">
 
         <aside class="order-guide-image" dir="rtl">
+
             <img
                 src="order-guide-long.png"
                 alt="איך מזמינים? מדריך בארבעה צעדים"
             >
+
         </aside>
 
         <div class="shop-products">
@@ -1187,6 +1246,8 @@ footer {
 
 <script>
 
+/* PRODUCTS */
+
 const products = [
     {id:7,shade:"110",price:39},
     {id:1,shade:"150",price:39},
@@ -1203,6 +1264,8 @@ const cart = {};
 
 const money = n => n.toLocaleString("he-IL") + " ₪";
 
+/* DISPLAY PRODUCTS */
+
 function renderProducts() {
 
     document.getElementById("products").innerHTML =
@@ -1211,10 +1274,12 @@ function renderProducts() {
         <div class="card">
 
             <div class="photo">
+
                 <img
                     src="${p.shade}.jpg"
                     alt="מייקאפ REVLON גוון ${p.shade}"
                 >
+
             </div>
 
             <h3>
@@ -1238,6 +1303,8 @@ function renderProducts() {
     `).join("");
 
 }
+
+/* ADDITIONAL PRODUCTS */
 
 function renderAdditionalProducts() {
 
@@ -1282,6 +1349,8 @@ function renderAdditionalProducts() {
 
 }
 
+/* ADD TO CART */
+
 function add(id) {
 
     cart[id] = (cart[id] || 0) + 1;
@@ -1289,6 +1358,8 @@ function add(id) {
     renderCart();
 
 }
+
+/* CHANGE QUANTITY */
 
 function change(id,delta) {
 
@@ -1304,6 +1375,8 @@ function change(id,delta) {
 
 }
 
+/* FLOATING CART COUNTER */
+
 function updateFloatingCart() {
 
     const counter =
@@ -1318,6 +1391,8 @@ function updateFloatingCart() {
     }
 
 }
+
+/* DISPLAY CART */
 
 function renderCart() {
 
@@ -1381,6 +1456,8 @@ function renderCart() {
     updateFloatingCart();
 
 }
+
+/* SEND ORDER BY EMAIL */
 
 document.getElementById("orderForm").onsubmit = function(e) {
 
@@ -1462,6 +1539,8 @@ document.getElementById("orderForm").onsubmit = function(e) {
     );
 
 };
+
+/* INITIALIZE WEBSITE */
 
 renderProducts();
 
